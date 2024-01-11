@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import { DribbbleIcon, FacebookIcon, GithubIcon, LinkedInIcon } from "./Icons";
+import { MediumIcon, FacebookIcon, GithubIcon, LinkedInIcon } from "./Icons";
 import { motion } from "framer-motion";
 
 const CustomLink = ({ href, title, className = "" }) => {
@@ -34,7 +34,7 @@ const NavBar = () => {
         <motion.a
           href="https://github.com/nadeeshaMadusanka99"
           target={"_blank"}
-          whileHover={{ y: -2 }}
+          whileHover={{ y: -3 }}
           whileTap={{ scale: 0.9 }}
           className="mr-3 w-6"
         >
@@ -43,7 +43,7 @@ const NavBar = () => {
         <motion.a
           href="https://github.com/nadeeshaMadusanka99"
           target={"_blank"}
-          whileHover={{ y: -2 }}
+          whileHover={{ y: -3 }}
           whileTap={{ scale: 0.9 }}
           className="mx-3 w-6"
         >
@@ -52,7 +52,7 @@ const NavBar = () => {
         <motion.a
           href="https://github.com/nadeeshaMadusanka99"
           target={"_blank"}
-          whileHover={{ y: -2 }}
+          whileHover={{ y: -3 }}
           whileTap={{ scale: 0.9 }}
           className="mx-3 w-6"
         >
@@ -61,11 +61,11 @@ const NavBar = () => {
         <motion.a
           href="https://github.com/nadeeshaMadusanka99"
           target={"_blank"}
-          whileHover={{ y: -2 }}
+          whileHover={{ y: -3 }}
           whileTap={{ scale: 0.9 }}
           className="ml-3 w-6"
         >
-          <DribbbleIcon />
+          <MediumIcon />
         </motion.a>
       </nav>
     </header>

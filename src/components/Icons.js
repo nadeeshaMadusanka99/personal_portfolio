@@ -17,38 +17,36 @@ export const GithubIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-
 export const FacebookIcon = ({ className, ...rest }) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={950}
-      height={950}
-      fill="none"
-      viewBox="0 0 32 32"
-      {...rest}
-      className={`w-full h-auto ${className}`}
-    >
-      <circle cx={16} cy={16} r={14} fill="url(#a)" />
-      <path
-        fill="#fff"
-        d="m21.214 20.282.622-3.952h-3.89v-2.563c0-1.081.542-2.136 2.284-2.136H22V8.267S20.395 8 18.86 8c-3.205 0-5.298 1.893-5.298 5.318v3.012H10v3.952h3.562v9.552a14.468 14.468 0 0 0 4.383 0v-9.552h3.269Z"
-      />
-      <defs>
-        <linearGradient
-          id="a"
-          x1={16}
-          x2={16}
-          y1={2}
-          y2={29.917}
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#18ACFE" />
-          <stop offset={1} stopColor="#0163E0" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-  
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={950}
+    height={950}
+    fill="none"
+    viewBox="0 0 32 32"
+    {...rest}
+    className={`w-full h-auto ${className}`}
+  >
+    <circle cx={16} cy={16} r={14} fill="url(#a)" />
+    <path
+      fill="#fff"
+      d="m21.214 20.282.622-3.952h-3.89v-2.563c0-1.081.542-2.136 2.284-2.136H22V8.267S20.395 8 18.86 8c-3.205 0-5.298 1.893-5.298 5.318v3.012H10v3.952h3.562v9.552a14.468 14.468 0 0 0 4.383 0v-9.552h3.269Z"
+    />
+    <defs>
+      <linearGradient
+        id="a"
+        x1={16}
+        x2={16}
+        y1={2}
+        y2={29.917}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#18ACFE" />
+        <stop offset={1} stopColor="#0163E0" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
 
 export const LinkedInIcon = ({ className, ...rest }) => (
   <svg
@@ -71,26 +69,21 @@ export const LinkedInIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const DribbbleIcon = ({ className, ...rest }) => (
+export const MediumIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
-    viewBox="0 0 256 256"
+    width={800}
+    height={900}
+    preserveAspectRatio="xMidYMid"
+    viewBox="0 -55 256 256"
     {...rest}
     className={`w-full h-auto ${className}`}
   >
-    <path fill="none" d="M0 0h256v256H0z" />
-    <path
-      fill="#E74D89"
-      d="M128 8.5c66 0 119.4 53.4 119.4 119.3S194 247.2 128 247.2 8.6 193.8 8.6 127.9 62 8.5 128 8.5Z"
-    />
-    <path
-      fill="#B2215A"
-      d="M128 255.7c-70.6 0-128-57.3-128-127.8C0 57.3 57.4 0 128 0s128 57.3 128 127.8-57.4 127.9-128 127.9Zm107.9-110.4c-3.7-1.2-33.8-10.1-68.1-4.7 14.3 39.2 20.1 71.2 21.2 77.8 24.6-16.5 42.1-42.7 46.9-73.1Zm-65.2 83.2c-1.6-9.6-8-43-23.3-82.8-.2.1-.5.2-.7.2-61.7 21.5-83.8 64.2-85.8 68.2 18.5 14.4 41.8 23 67.1 23 15.1.1 29.6-3 42.7-8.6ZM46.8 201c2.5-4.2 32.5-53.8 88.9-72.1 1.4-.5 2.9-.9 4.3-1.3-2.7-6.2-5.7-12.4-8.9-18.5-54.6 16.3-107.6 15.6-112.4 15.5 0 1.1-.1 2.2-.1 3.3.1 28.1 10.7 53.7 28.2 73.1ZM21 105.6c4.9.1 49.9.3 101.1-13.3C104 60.1 84.4 33.1 81.6 29.2 50.9 43.6 28.1 71.8 21 105.6Zm81.4-83.8c3 4 22.9 31 40.8 63.9 38.9-14.6 55.3-36.6 57.3-39.4-19.3-17.1-44.7-27.5-72.5-27.5-8.8 0-17.4 1.1-25.6 3Zm110.2 37.1c-2.3 3.1-20.6 26.6-61 43.1 2.5 5.2 5 10.5 7.3 15.8.8 1.9 1.6 3.8 2.4 5.6 36.4-4.6 72.5 2.8 76.1 3.5-.3-25.7-9.5-49.4-24.8-68Z"
-    />
+    <path d="M72.2 0c39.877 0 72.2 32.549 72.2 72.696 0 40.148-32.326 72.694-72.2 72.694-39.872 0-72.2-32.546-72.2-72.694C0 32.55 32.325 0 72.2 0Zm115.3 4.258c19.938 0 36.101 30.638 36.101 68.438h.003c0 37.791-16.163 68.438-36.1 68.438-19.939 0-36.101-30.647-36.101-68.438 0-37.79 16.16-68.438 36.098-68.438Zm55.803 7.129c7.011 0 12.697 27.449 12.697 61.31 0 33.85-5.684 61.31-12.697 61.31-7.013 0-12.694-27.452-12.694-61.31 0-33.859 5.684-61.31 12.694-61.31Z" />
   </svg>
-);
+)
+
+
 
 export const SunIcon = ({ className, ...rest }) => (
   <svg
@@ -460,4 +453,3 @@ export const LinkArrow = ({ className, ...rest }) => (
     />
   </svg>
 );
-
