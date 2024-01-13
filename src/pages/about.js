@@ -5,7 +5,7 @@ import Head from "next/head";
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
 // import { useInView, useMotionValue, useSpring } from "framer-motion";
-// import Skills from "@/components/Skills";
+import Skills from "@/components/Skills";
 // import Experience from "@/components/Experience";
 // import Education from "@/components/Education";
 // import TransitionEffect from "@/components/TransitionEffect";
@@ -54,7 +54,7 @@ const About = () => {
           />
 
           <div className="grid w-full grid-cols-12 gap-16">
-            <div className="col-span-5 flex flex-col items-start justify-start mt-6">
+            <div className="col-span-6 flex flex-col items-start justify-start mt-10">
               <h2 className="mb-4 text-xl font-bold uppercase text-dark/75 ">
                 BIOGRAPHY
               </h2>
@@ -64,7 +64,7 @@ const About = () => {
                 </p>
               ))}
             </div>
-            <div className="col-span-2"/>
+            <div className="col-span-"/>
             <div className="col-span-5 relative rounded-2xl border-2 border-solid border-dark bg-light p-8 ">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
               <Image
@@ -74,8 +74,8 @@ const About = () => {
               />
             </div>
           </div>
-          {/* <Skills />
-          <Experience />
+          <Skills />
+          {/* <Experience />
           <Education /> */}
         </Layout>
       </main>
