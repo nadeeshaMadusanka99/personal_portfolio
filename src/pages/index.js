@@ -6,6 +6,7 @@ import ProfilePic from "../../public/images/profile/developer-pic-1.png";
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
+import ContactMe from "@/components/ContactMe";
 
 export default function Home() {
   return (
@@ -46,17 +47,18 @@ export default function Home() {
                   Resume
                   <LinkArrow className={"w-6 ml-1"} /> 
                 </Link>
-                <Link
+                {/* <Link
                   href="mailto:nadeeshamadusanka44@gmail.com"
                   target={"_blank"}
                   className="ml-6 text-lg font-medium capitalize text-dark underline"
                 >
                   Contact
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
         </Layout>
+        <ContactMe />
       </main>
     </>
   );
