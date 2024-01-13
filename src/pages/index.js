@@ -27,14 +27,15 @@ export default function Home() {
             </div>
             <div className="w-1/2 flex flex-col items-center self-center ">
               <AnimatedText
-                text={`Hi I'm Nadeesha Madusanka.\nI'm a web & mobile developer.`}
+                text={`Hi I'm Nadeesha, \nA Web & Mobile Developer.`}
                 className="!text-6xl !text-left"
               />
               <p className="my-4 text-base font-medium">
-                As a skilled full-stack developer, I am dedicated to turning
-                ideas into innovative web applications. Explore my latest
-                projects and articles, showcasing my expertise in React.js and
-                web development.
+                As a skilled fullstack developer, I am devoted to transforming
+                ideas into cutting-edge applications for both web and mobile
+                platforms. So here discover my latest projects, showcasing
+                my proficiency and comprehensive expertise in web
+                and mobile development.
               </p>
               <div className="flex items-center self-start mt-2">
                 <Link
@@ -45,7 +46,7 @@ export default function Home() {
                   hover:border-dark"
                 >
                   Resume
-                  <LinkArrow className={"w-6 ml-1"} /> 
+                  <LinkArrow className={"w-6 ml-1"} />
                 </Link>
                 {/* <Link
                   href="mailto:nadeeshamadusanka44@gmail.com"

@@ -10,7 +10,7 @@ const CustomLink = ({ href, title, className = "" }) => {
     <Link href={href} className={`${className} relative group`}>
       {title}
       <span
-        className={`h-[1px] inline-block inline-2 bg-black absolute left-0 -bottom-0.5 
+        className={`h-[2px] inline-block inline-2 bg-black absolute left-0 -bottom-0.5 
         group-hover:w-full transition-[width] ease duration-300 
         ${router.asPath === href ? "w-full" : "w-0"}`}
       >
@@ -27,7 +27,7 @@ const NavBar = () => {
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About" className="mx-4" />
         <CustomLink href="/projects" title="Projects" className="mx-4" />
-        <CustomLink href="/articles" title="Articles" className="ml-4" />
+        <CustomLink href="/articles" title="Contact Me" className="ml-4" />
       </nav>
 
       <nav className="flex justify-center items-center">
