@@ -32,7 +32,7 @@ const NavBar = () => {
 
       <nav className="flex justify-center items-center">
         <motion.a
-          href="https://github.com/nadeeshaMadusanka99"
+          href="https://www.facebook.com/nadeesha.madusanka.5648/"
           target={"_blank"}
           whileHover={{ y: -3 }}
           whileTap={{ scale: 0.9 }}
@@ -50,7 +50,7 @@ const NavBar = () => {
           <GithubIcon />
         </motion.a>
         <motion.a
-          href="https://github.com/nadeeshaMadusanka99"
+          href="https://www.linkedin.com/in/nadeesha-madusanka-5454b2246/"
           target={"_blank"}
           whileHover={{ y: -3 }}
           whileTap={{ scale: 0.9 }}
@@ -59,7 +59,7 @@ const NavBar = () => {
           <LinkedInIcon />
         </motion.a>
         <motion.a
-          href="https://github.com/nadeeshaMadusanka99"
+          href="https://medium.com/@nadeeshamadusanka44"
           target={"_blank"}
           whileHover={{ y: -3 }}
           whileTap={{ scale: 0.9 }}
