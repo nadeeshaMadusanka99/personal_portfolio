@@ -12,6 +12,8 @@ import Skills from "@/components/Skills";
 import { profilePic } from "@/imports/index";
 import { DataContent } from "@/content/About";
 import Image from "next/image";
+import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 
 const About = () => {
   //   const AnimatedNumber = ({ value }) => {
@@ -75,8 +77,8 @@ const About = () => {
             </div>
           </div>
           <Skills />
-          {/* <Experience />
-          <Education /> */}
+          {/* <Experience /> */}
+          <Education />
         </Layout>
       </main>
     </>
