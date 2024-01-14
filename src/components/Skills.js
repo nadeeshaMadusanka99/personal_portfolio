@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-// import {RenderSkill} from "@/components/RenderSkill"
 import styled from "styled-components";
 import { skills } from "@/components/RenderSkill";
 
@@ -62,7 +61,6 @@ const SkillsContainer = styled.div`
   flex-wrap: wrap;
   margin-top: 30px;
   gap: 100px;
-  ${"" /* padding: 100px; */}
   justify-content: center;
 `;
 
@@ -98,13 +96,13 @@ const SkillList = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 17px;
   margin-bottom: 20px;
 `;
 
 const SkillItem = styled.div`
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   color: ${({ theme }) => theme.text_primary + 80};
   border: 1px solid ${({ theme }) => theme.text_primary + 80};
   border-radius: 12px;
@@ -166,15 +164,19 @@ const Skills = () => {
     <Container id="skills">
       <Wrapper>
         <h2 className="font-bold text-7xl  mb-20 w-full text-center">Skills</h2>
-        <motion.div
-          initial={{ y: 50 }}
-          whileInView={{ y: 0 }}
-          transition={{ duration: 1, type: "spring" }}
-        >
           <SkillsContainer>
             {skills.map((skill, index) => (
-              <Skill key={index}>
-                <SkillTitle>{skill.title}</SkillTitle>
+              <motion.div
+                initial={{ y: 50 }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 0.5, type: "spring" }}
+                whileHover={{ scale: 1.03 }}
+                className="w-full max-w-full ring-2 ring-zinc-300 bg-card border-2 border-solid border-zinc-500 shadow-lg shadow-zinc-200 rounded-3xl p-6"
+                key={index}
+              >
+                <div className="text-2xl font-semibold text-secondary mb-5 text-center">
+                  {skill.title}
+                </div>
                 <SkillList>
                   {skill.skills.map((item, index) => (
                     <SkillItem key={index}>
@@ -183,10 +185,9 @@ const Skills = () => {
                     </SkillItem>
                   ))}
                 </SkillList>
-              </Skill>
+              </motion.div>
             ))}
           </SkillsContainer>
-        </motion.div>
       </Wrapper>
     </Container>
   );

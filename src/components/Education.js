@@ -36,7 +36,7 @@ const Education = ({ educationData }) => {
 
   return (
     <>
-      <div className="my-64">
+      <div className="my-52">
         <h2 className="font-bold text-7xl mb-32 mt-30 w-full text-center">
           Education
         </h2>

@@ -14,6 +14,7 @@ import { DataContent } from "@/content/About";
 import Image from "next/image";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
+import Link from "next/link";
 
 const About = () => {
   //   const AnimatedNumber = ({ value }) => {
@@ -65,8 +66,17 @@ const About = () => {
                   {data.type}
                 </p>
               ))}
+            <Link
+              href="mailto:nadeeshamadusanka44@gmail.com"
+              target={"_blank"}
+              className="flex items-center bg-dark text-light mt-6 p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light
+                 hover:text-dark border-2 border-solid border-transparent
+                  hover:border-dark "
+            >
+              Contact Me
+            </Link>
             </div>
-            <div className="col-span-"/>
+            <div className="col-span-" />
             <div className="col-span-5 relative rounded-2xl border-2 border-solid border-dark bg-light p-8 ">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
               <Image
