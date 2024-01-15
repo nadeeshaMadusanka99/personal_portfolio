@@ -2,18 +2,18 @@ import Head from "next/head";
 // import React, { useEffect, useRef } from "react";
 
 //* Import Components
-import Layout from "@/components/Layout";
-import AnimatedText from "@/components/AnimatedText";
+import Layout from "@/components/Common/Layout";
+import AnimatedText from "@/components/Common/AnimatedText";
 // import { useInView, useMotionValue, useSpring } from "framer-motion";
-import Skills from "@/components/Skills";
+import Skills from "@/components/AboutMe/Skills";
 // import Experience from "@/components/Experience";
 // import Education from "@/components/Education";
 // import TransitionEffect from "@/components/TransitionEffect";
 import { profilePic } from "@/imports/index";
 import { DataContent } from "@/content/About";
 import Image from "next/image";
-import Experience from "@/components/Experience";
-import Education from "@/components/Education";
+import Experience from "@/components/AboutMe/Experience";
+import Education from "@/components/AboutMe/Education";
 import Link from "next/link";
 
 const About = () => {
@@ -42,7 +42,7 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>Nadeesha Portfolio - About Me</title>
+        <title>Nadeesha Profile | About Me</title>
         <meta
           name="nadeeshaprofile"
           content="nadeesha's portfolio about page"

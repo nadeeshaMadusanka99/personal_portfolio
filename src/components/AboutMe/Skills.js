@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { skills } from "@/components/RenderSkill";
+import { skills } from "@/components/AboutMe/RenderSkill";
 
 const Container = styled.div`
   display: flex;
