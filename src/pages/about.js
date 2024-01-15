@@ -1,20 +1,17 @@
 import Head from "next/head";
-// import React, { useEffect, useRef } from "react";
 
 //* Import Components
 import Layout from "@/components/Common/Layout";
 import AnimatedText from "@/components/Common/AnimatedText";
-// import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/AboutMe/Skills";
-// import Experience from "@/components/Experience";
-// import Education from "@/components/Education";
 // import TransitionEffect from "@/components/TransitionEffect";
 import { profilePic } from "@/imports/index";
 import { DataContent } from "@/content/About";
 import Image from "next/image";
-import Experience from "@/components/AboutMe/Experience";
+// import Experience from "@/components/AboutMe/Experience";
 import Education from "@/components/AboutMe/Education";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const About = () => {
   //   const AnimatedNumber = ({ value }) => {
@@ -66,24 +63,34 @@ const About = () => {
                   {data.type}
                 </p>
               ))}
-            <Link
-              href="mailto:nadeeshamadusanka44@gmail.com"
-              target={"_blank"}
-              className="flex items-center bg-dark text-light mt-6 p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light
+              <Link
+                href="mailto:nadeeshamadusanka44@gmail.com"
+                target={"_blank"}
+                className="flex items-center bg-dark text-light mt-6 p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light
                  hover:text-dark border-2 border-solid border-transparent
                   hover:border-dark "
-            >
-              Contact Me
-            </Link>
+              >
+                Contact Me
+              </Link>
             </div>
             <div className="col-span-" />
             <div className="col-span-5 relative rounded-2xl border-2 border-solid border-dark bg-light p-8 ">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
-              <Image
-                src={profilePic}
-                alt="NadeeshaMadusanka"
-                className="w-[25rem] h-[30rem] rounded-2xl"
-              />
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: { opacity: 0.5, scale: 0.9 },
+                  visible: { opacity: 1, scale: 1 },
+                }}
+                transition={{ duration: 0.8 }}
+              >
+                <Image
+                  src={profilePic}
+                  alt="NadeeshaMadusanka"
+                  className="w-[25rem] h-[30rem] rounded-2xl"
+                />
+              </motion.div>
             </div>
           </div>
           <Skills />
