@@ -28,6 +28,7 @@ const project = () => {
             {dataProject.map((project) => (
               <div key={project.id} className={project.styles}>
                 <ProjectCard
+                type={project.type}
                   title={project.title}
                   summary={project.summary}
                   link={project.link}
