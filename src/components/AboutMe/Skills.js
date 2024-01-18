@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { skills } from "@/components/AboutMe/RenderSkill";
@@ -127,8 +127,40 @@ const SkillImage = styled.img`
   width: 24px;
   height: 24px;
 `;
+const SkillCard = styled.div`
+  width: 100%;
+  max-width: 100%;
+  background: ${({ theme }) => theme.card};
+  transition: transform 1.5s;
+  transform-style: preserve-3d;
+  &:hover {
+    transform: rotateY(180deg);
+  }
+`;
+
+const CardContent = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const FrontContent = styled(CardContent)``;
+
+const BackContent = styled(CardContent)`
+  transform: rotateY(180deg);
+`;
 
 const Skills = () => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleCardFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
   // return (
   //   <>
   //     <h2 className="font-bold text-8xl mt-20 mb-10 w-full text-center">Skills</h2>
@@ -164,30 +196,47 @@ const Skills = () => {
     <Container id="skills">
       <Wrapper>
         <h2 className="font-bold text-7xl  mb-20 w-full text-center">Skills</h2>
-          <SkillsContainer>
-            {skills.map((skill, index) => (
-              <motion.div
-                initial={{ y: 50 }}
-                whileInView={{ y: 0 }}
-                transition={{ duration: 0.5, type: "spring" }}
-                whileHover={{ scale: 1.03 }}
-                className="w-full max-w-full ring-2 ring-zinc-300 bg-card border-2 border-solid border-zinc-500 shadow-lg shadow-zinc-200 rounded-3xl p-6"
-                key={index}
-              >
-                <div className="text-2xl font-semibold text-secondary mb-5 text-center">
-                  {skill.title}
-                </div>
-                <SkillList>
-                  {skill.skills.map((item, index) => (
-                    <SkillItem key={index}>
-                      <SkillImage src={item.image} />
-                      {item.name}
-                    </SkillItem>
-                  ))}
-                </SkillList>
-              </motion.div>
-            ))}
-          </SkillsContainer>
+        <SkillsContainer>
+          {skills.map((skill, index) => (
+            <SkillCard
+              key={index}
+              onClick={handleCardFlip}
+              className={isFlipped ? "flipped" : ""}
+            >
+              <FrontContent key={index}>
+                <motion.div
+                  initial={{ y: 50 }}
+                  whileInView={{ y: 0 }}
+                  transition={{ duration: 0.5, type: "spring" }}
+                  whileHover={{ scale: 1.03 }}
+                  className="w-full max-w-full ring-2 ring-zinc-300 bg-card border-2 border-solid border-zinc-500 shadow-lg shadow-zinc-200 rounded-3xl p-6"
+                >
+                  <div className="text-2xl font-semibold text-secondary mb-30 p-30 text-center">
+                    {skill.title}
+                  </div>
+                </motion.div>
+              </FrontContent>
+              <BackContent>
+                <motion.div
+                  initial={{ y: 50 }}
+                  whileInView={{ y: 0 }}
+                  transition={{ duration: 0.5, type: "spring" }}
+                  whileHover={{ scale: 1.03 }}
+                  className="w-full max-w-full ring-2 ring-zinc-300 bg-card border-2 border-solid border-zinc-500 shadow-lg shadow-zinc-200 rounded-3xl p-6"
+                >
+                  <SkillList>
+                    {skill.skills.map((item, index) => (
+                      <SkillItem key={index}>
+                        <SkillImage src={item.image} />
+                        {item.name}
+                      </SkillItem>
+                    ))}
+                  </SkillList>
+                </motion.div>
+              </BackContent>
+            </SkillCard>
+          ))}
+        </SkillsContainer>
       </Wrapper>
     </Container>
   );
