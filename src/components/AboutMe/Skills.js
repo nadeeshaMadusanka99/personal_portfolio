@@ -10,7 +10,7 @@ const Container = styled.div`
   position: relative;
   z-index: 1;
   align-items: center;
-  margin-top: 10rem;
+  margin-top: 7rem;
 `;
 
 const Wrapper = styled.div`
@@ -131,11 +131,12 @@ const SkillCard = styled.div`
   width: 100%;
   max-width: 100%;
   background: ${({ theme }) => theme.card};
-  transition: transform 1.5s;
+  transition: transform 1.7s;
   transform-style: preserve-3d;
   &:hover {
     transform: rotateY(180deg);
   }
+  margin-bottom: 5rem;
 `;
 
 const CardContent = styled.div`
@@ -195,7 +196,7 @@ const Skills = () => {
   return (
     <Container id="skills">
       <Wrapper>
-        <h2 className="font-bold text-7xl  mb-20 w-full text-center">Skills</h2>
+        <h2 className="font-bold text-7xl text-secondary mb-28 w-full text-center">Skills</h2>
         <SkillsContainer>
           {skills.map((skill, index) => (
             <SkillCard
@@ -209,9 +210,9 @@ const Skills = () => {
                   whileInView={{ y: 0 }}
                   transition={{ duration: 0.5, type: "spring" }}
                   whileHover={{ scale: 1.03 }}
-                  className="w-full max-w-full ring-2 ring-zinc-300 bg-card border-2 border-solid border-zinc-500 shadow-lg shadow-zinc-200 rounded-3xl p-6"
+                  className="w-full max-w-full ring-2 ring-zinc-300 border-2 border-solid border-zinc-500 shadow-lg shadow-zinc-200 rounded-3xl py-10 "
                 >
-                  <div className="text-2xl font-semibold text-secondary mb-30 p-30 text-center">
+                  <div className="text-5xl font-bold text-dark/75 text-center">
                     {skill.title}
                   </div>
                 </motion.div>
