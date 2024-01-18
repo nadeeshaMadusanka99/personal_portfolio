@@ -53,7 +53,7 @@ const About = () => {
             className="text-7xl mb-20"
           />
 
-          <div className="grid w-full grid-cols-12 gap-16">
+          <div className="grid w-full grid-cols-12 gap-16 ">
             <div className="col-span-6 flex flex-col items-start justify-start mt-10">
               <h2 className="mb-4 text-xl font-bold uppercase text-dark/75 ">
                 BIOGRAPHY
