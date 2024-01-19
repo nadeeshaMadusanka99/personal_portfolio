@@ -212,7 +212,7 @@ const Skills = () => {
                   whileHover={{ scale: 1.03 }}
                   className="w-full max-w-full ring-2 ring-zinc-300 border-2 border-solid border-zinc-500 shadow-lg shadow-zinc-200 rounded-3xl py-10 "
                 >
-                  <div className="text-5xl font-bold text-dark/75 text-center">
+                  <div className="text-5xl font-bold text-dark/75 text-center dark:text-light/75">
                     {skill.title}
                   </div>
                 </motion.div>
