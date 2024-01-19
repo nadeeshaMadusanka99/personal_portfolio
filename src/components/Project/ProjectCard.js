@@ -12,7 +12,7 @@ export const ProjectCard = ({ type, img, title, summary, link, github }) => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
       viewport={{once:true}}
       className="w-full flex items-center justify-between  rounded-3xl relative
-       border border-solid border-dark bg-light shadow-lg  p-12 rounded-br-2xl"
+      ring-2 ring-zinc-300 border-2 border-solid border-zinc-500 shadow-lg shadow-zinc-200  p-12 rounded-br-2xl"
     >
       {/* <div
         className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark

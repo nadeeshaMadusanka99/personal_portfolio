@@ -27,7 +27,7 @@ const LiIcon = ({ reference }) => {
           cx="75"
           cy="50"
           r="10"
-          className="animate-pulse stroke-1 fill-acsent"
+          className="animate-pulse stroke-1 fill-darkred"
         />
       </svg>
     </figure>
