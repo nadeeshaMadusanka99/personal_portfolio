@@ -12,7 +12,7 @@ const ContactMe = () => {
     >
       <div className="w-48 h-auto flex items-center justify-center relative">
         <CircularText
-          className="fill-dark animate-spin-slow "
+          className="fill-dark animate-spin-slow dark:fill-light "
           //   style={{ fontSize: "66px" }}
         />
         <MotionLink
