@@ -46,7 +46,7 @@ const About = () => {
         />
       </Head>
       {/* <TransitionEffect /> */}
-      <main className="flex w-full flex-col items-center justify-between ">
+      <main className="flex w-full flex-col items-center justify-between dark:text-light">
         <Layout className="pt-8">
           <AnimatedText
             text="Inspiration Drives Innovation!"
@@ -55,7 +55,7 @@ const About = () => {
 
           <div className="grid w-full grid-cols-12 gap-16 ">
             <div className="col-span-6 flex flex-col items-start justify-start mt-10">
-              <h2 className="mb-4 text-xl font-bold uppercase text-dark/75 ">
+              <h2 className="mb-4 text-xl font-bold uppercase text-dark/75 dark:text-light/75 ">
                 BIOGRAPHY
               </h2>
               {DataContent.map((data, id) => (
@@ -68,14 +68,14 @@ const About = () => {
                 target={"_blank"}
                 className="flex items-center bg-dark text-light mt-6 p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light
                  hover:text-dark border-2 border-solid border-transparent
-                  hover:border-dark "
+                  hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
               >
                 Contact Me
               </Link>
             </div>
             <div className="col-span-" />
-            <div className="col-span-5 relative rounded-2xl border-2 border-solid border-dark bg-light p-8 ">
-              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
+            <div className="col-span-5 relative rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light">
+              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
               <motion.div
                 initial="hidden"
                 animate="visible"

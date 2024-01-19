@@ -8,29 +8,28 @@ const useThemeSwitcher = () => {
     const mediaQuery = window.matchMedia(preferDarkQuery);
     const userPref = window.localStorage.getItem("theme");
     const handleChange = () => {
+      let check;
       if (userPref) {
-        let check = userPref === "dark" ? "dark" : "light";
-        setMode(check);
-        if (check === "dark") {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.remove("dark");
-        }
+        check = userPref === "dark" ? "dark" : "light";
       } else {
-        let check = mediaQuery.matches ? "dark" : "light";
-        setMode(check);
-        window.localStorage.setItem("theme", check);
-        if (check === "dark") {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.remove("dark");
-        }
+        check = mediaQuery.matches ? "dark" : "light";
+      }
+
+      setMode(check);
+      window.localStorage.setItem("theme", check);
+
+      if (check === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
       }
     };
+
     handleChange();
     mediaQuery.addEventListener("change", handleChange);
+
     return () => mediaQuery.removeEventListener("change", handleChange);
-  }, []);
+  }, []); // <-- Add userPref as a dependency
 
   useEffect(() => {
     if (mode === "dark") {
