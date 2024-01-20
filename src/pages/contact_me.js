@@ -76,24 +76,24 @@ const contact_me = () => {
             // whileInView="animate"
           >
             <motion.div
-              // className={`flex-1 flex flex-col gap-40 `}
-              variants={variants}
+            // className={`flex-1 flex flex-col gap-40 `}
+            // variants={variants}
             >
               <motion.h1
                 className="text-7xl font-extrabold leading-relaxed text-center"
-                variants={variants}
+                // variants={variants}
               >
                 Let’s <br />
                 Work <br />
                 Wogether
               </motion.h1>
             </motion.div>
-            <div className={`flex-1 relative `}>
+            <div className={`flex-1 relative`}>
               <motion.div
-                className={` stroke-orange absolute m-auto z-[-1]`}
-                // initial={{ opacity: 1 }}
-                // whileInView={{ opacity: 0 }}
-                // transition={{ delay: 3, duration: 1 }}
+                className={`stroke-3 stroke-orange-600  m-auto absolute`}
+                initial={{ opacity: 1 }}
+                whileInView={{ opacity: 0 }}
+                transition={{ delay: 3, duration: 1 }}
               >
                 <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
                   <motion.path
@@ -119,14 +119,13 @@ const contact_me = () => {
                 </svg>
               </motion.div>
 
-              
               <motion.form
                 ref={formRef}
                 // onSubmit={sendEmail}
-                // initial={{ opacity: 0 }}
-                // whileInView={{ opacity: 1 }}
-                // transition={{ delay: 4, duration: 1 }}
-                className="flex flex-col items-center gap-12 "
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 4, duration: 1 }}
+                className="flex flex-col items-center gap-12"
               >
                 <input
                   type="text"
@@ -140,7 +139,7 @@ const contact_me = () => {
                   required
                   placeholder="Email"
                   name="email"
-                  className="p-5 w-full  rounded-xl border border-zinc-400"
+                  className="p-5 w-full  rounded-xl border border-zinc-400 "
                 />
                 <textarea
                   rows={8}
@@ -154,7 +153,7 @@ const contact_me = () => {
                  hover:text-dark border-2 border-solid border-transparent 
                   hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
                 >
-                  Submit
+                  Send
                 </button>
                 {/* {error && "Error"}
                 {success && "Success"} */}
