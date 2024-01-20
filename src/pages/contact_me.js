@@ -8,7 +8,7 @@ import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { RightArrowIcon } from "@/components/Common/Icons";
 import useThemeSwitcher from "@/components/Hooks/useThemeSwitcher";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const variants = {
   initial: {
@@ -42,10 +42,10 @@ const contact_me = () => {
 
     emailjs
       .sendForm(
-        "service_lh2a82c",
-        "template_g81nwx7",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        "NFvvZJyP7b1HO8UVu"
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -79,8 +79,6 @@ const contact_me = () => {
             whileInView="animate"
           >
             <motion.div
-            // className={`flex-1 flex flex-col gap-40 `}
-            
             >
               <motion.h1
                 className="text-7xl font-extrabold leading-normal text-right text-black dark:text-light"
