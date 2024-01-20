@@ -20,6 +20,8 @@ module.exports = {
         primary: "#B63E96",
         primaryDark: "#58E6D9",
         darkred: "#8b0000",
+        green: "#18e745",
+        error: "#ff0000",
       },
       animation: {
         "spin-slow": "spin 10s linear infinite",
