@@ -6,20 +6,22 @@ import Head from "next/head";
 import React from "react";
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import { RightArrowIcon } from "@/components/Common/Icons";
+import useThemeSwitcher from "@/components/Hooks/useThemeSwitcher";
 // import emailjs from "emailjs-com";
-// import styles from "./contact.module.scss";
 
 const variants = {
   initial: {
-    y: 500,
+    y: 100,
     opacity: 0,
   },
   animate: {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
-      staggerChildren: 0.1,
+      ease: "easeInOut",
+      duration: 2,
+      staggerChildren: 0.2,
     },
   },
 };
@@ -29,7 +31,8 @@ const contact_me = () => {
   const formRef = useRef();
   // const [error, setError] = useState(false);
   // const [success, setSuccess] = useState(false);
-
+  const [mode, setMode] = useThemeSwitcher();
+  console.log(mode);
   const isInView = useInView(ref, { margin: "-100px" });
 
   // const sendEmail = (e) => {
@@ -61,47 +64,52 @@ const contact_me = () => {
           content="nadeesha's portfolio contact me page"
         />
       </Head>
-      {/* <TransitionEffect /> */}
-      <main>
+      <TransitionEffect />
+      <main className="w-full m-8 ">
         <Layout className="pt-8">
-          <AnimatedText
-            text="Expertise sparks brilliance!"
-            className="text-7xl mb-30 mt-0"
-          />
           <motion.div
             ref={ref}
-            className={`flex gap-40 mt-52`}
-            // variants={variants}
-            // initial="initial"
-            // whileInView="animate"
+            className={`flex gap-40`}
+            variants={variants}
+            initial="initial"
+            whileInView="animate"
           >
             <motion.div
             // className={`flex-1 flex flex-col gap-40 `}
-            // variants={variants}
+            
             >
               <motion.h1
-                className="text-7xl font-extrabold leading-relaxed text-center"
-                // variants={variants}
+                className="text-7xl font-extrabold leading-normal text-right text-black dark:text-light"
+                variants={variants}
               >
                 Let’s <br />
                 Work <br />
-                Wogether
+                Together
               </motion.h1>
+              <div className="flex flex-row mt-4">
+                <p
+                  className="text-3xl font-semibold text-black/60 dark:text-light/60"
+                  variants={variants}
+                >
+                  Connect with me
+                </p>
+                <RightArrowIcon className="fill-dark opacity-60 ml-2 dark:fill-light" />
+              </div>
             </motion.div>
             <div className={`flex-1 relative`}>
               <motion.div
-                className={`stroke-3 stroke-orange-600  m-auto absolute`}
+                className={`stroke-3 stroke-primary ml-10 absolute dark:stroke-primaryDark  p-2`}
                 initial={{ opacity: 1 }}
                 whileInView={{ opacity: 0 }}
                 transition={{ delay: 3, duration: 1 }}
               >
-                <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
+                <svg width="480px" height="485px" viewBox="0 0 33.5 32.666">
                   <motion.path
                     strokeWidth={0.2}
                     fill="none"
                     initial={{ pathLength: 0 }}
                     animate={isInView && { pathLength: 1 }}
-                    transition={{ duration: 3 }}
+                    transition={{ duration: 4 }}
                     d="M28.189,16.504h-1.666c0-5.437-4.422-9.858-9.856-9.858l-0.001-1.664C23.021,4.979,28.189,10.149,28.189,16.504z
             M16.666,7.856L16.665,9.52c3.853,0,6.983,3.133,6.981,6.983l1.666-0.001C25.312,11.735,21.436,7.856,16.666,7.856z M16.333,0
             C7.326,0,0,7.326,0,16.334c0,9.006,7.326,16.332,16.333,16.332c0.557,0,1.007-0.45,1.007-1.006c0-0.559-0.45-1.01-1.007-1.01
