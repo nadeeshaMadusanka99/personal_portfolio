@@ -8,7 +8,7 @@ import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { RightArrowIcon } from "@/components/Common/Icons";
 import useThemeSwitcher from "@/components/Hooks/useThemeSwitcher";
-// import emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
 
 const variants = {
   initial: {
@@ -29,31 +29,35 @@ const variants = {
 const contact_me = () => {
   const ref = useRef();
   const formRef = useRef();
-  // const [error, setError] = useState(false);
-  // const [success, setSuccess] = useState(false);
+
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+
   const [mode, setMode] = useThemeSwitcher();
   console.log(mode);
   const isInView = useInView(ref, { margin: "-100px" });
 
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  //   emailjs
-  //     .sendForm(
-  //       "service_94y20xo",
-  //       "template_v10u2oh",
-  //       formRef.current,
-  //       "pX_2hasGmGcuvjXIW"
-  //     )
-  //     .then(
-  //       (result) => {
-  //         setSuccess(true);
-  //       },
-  //       (error) => {
-  //         setError(true);
-  //       }
-  //     );
-  // };
+    emailjs
+      .sendForm(
+        "service_lh2a82c",
+        "template_g81nwx7",
+        formRef.current,
+        "NFvvZJyP7b1HO8UVu"
+      )
+      .then(
+        (result) => {
+          setSuccess(true);
+        },
+        (error) => {
+          setError(true);
+          console.log("error only:", error);
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
     <>
@@ -88,17 +92,17 @@ const contact_me = () => {
               </motion.h1>
               <div className="flex flex-row mt-4">
                 <p
-                  className="text-3xl font-semibold text-black/60 dark:text-light/60"
+                  className="text-3xl mr-4 font-semibold text-black/60 dark:text-light/60"
                   variants={variants}
                 >
                   Connect with me
                 </p>
-                <RightArrowIcon className="fill-dark opacity-60 ml-2 dark:fill-light" />
+                <RightArrowIcon className="fill-dark opacity-60  dark:fill-light" />
               </div>
             </motion.div>
             <div className={`flex-1 relative`}>
               <motion.div
-                className={`stroke-3 stroke-primary ml-10 absolute dark:stroke-primaryDark  p-2`}
+                className={`stroke-3 stroke-primary ml-10 absolute dark:stroke-primaryDark p-2 -z-1`}
                 initial={{ opacity: 1 }}
                 whileInView={{ opacity: 0 }}
                 transition={{ delay: 3, duration: 1 }}
@@ -129,7 +133,7 @@ const contact_me = () => {
 
               <motion.form
                 ref={formRef}
-                // onSubmit={sendEmail}
+                onSubmit={sendEmail}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 4, duration: 1 }}
@@ -163,8 +167,8 @@ const contact_me = () => {
                 >
                   Send
                 </button>
-                {/* {error && "Error"}
-                {success && "Success"} */}
+                {error && "Error"}
+                {success && "Success"}
               </motion.form>
             </div>
           </motion.div>
