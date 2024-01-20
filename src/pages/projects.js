@@ -7,6 +7,7 @@ import Layout from "@/components/Common/Layout";
 import { ProjectCard } from "@/components/Project/ProjectCard";
 // import TransitionEffect from "@/components/TransitionEffect";
 import { dataProject } from "@/content/Projects";
+import TransitionEffect from "@/components/Common/TransitionEffect";
 
 
 
@@ -17,8 +18,8 @@ const project = () => {
         <title> Nadeesha-Profile | Project Page</title>
         <meta name="description" content="any description" />
       </Head>
-      {/* <TransitionEffect /> */}
-      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden">
+      <TransitionEffect />
+      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
             text="Innovation Transcends Expertise! "

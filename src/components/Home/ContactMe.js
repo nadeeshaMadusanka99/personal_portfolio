@@ -16,10 +16,10 @@ const ContactMe = () => {
           //   style={{ fontSize: "66px" }}
         />
         <MotionLink
-          href="mailto:nadeeshamadusanka44@gmail.com"
+          href="/contact_me"
           className="flex items-center justify-center absolute left-1/2 top-1/2 
           -translate-x-1/2 -translate-y-1/2 bg-dark text-light shadow-md border border-solid
-         border-dark w-[85px] h-[85px] rounded-full font-semibold
+         border-dark w-[85px] h-[85px] rounded-full font-semibold hover:bg-light hover:text-dark
           hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark
            hover:dark:text-light hover:dark:border-light"
         >

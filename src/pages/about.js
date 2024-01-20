@@ -12,6 +12,7 @@ import Image from "next/image";
 import Education from "@/components/AboutMe/Education";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import TransitionEffect from "@/components/Common/TransitionEffect";
 
 const About = () => {
   //   const AnimatedNumber = ({ value }) => {
@@ -45,7 +46,7 @@ const About = () => {
           content="nadeesha's portfolio about page"
         />
       </Head>
-      {/* <TransitionEffect /> */}
+      <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-between dark:text-light">
         <Layout className="pt-8">
           <AnimatedText
@@ -64,8 +65,7 @@ const About = () => {
                 </p>
               ))}
               <Link
-                href="mailto:nadeeshamadusanka44@gmail.com"
-                target={"_blank"}
+                href="/contact_me"
                 className="flex items-center bg-dark text-light mt-6 p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light
                  hover:text-dark border-2 border-solid border-transparent
                   hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"

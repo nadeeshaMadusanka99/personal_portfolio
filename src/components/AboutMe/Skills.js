@@ -210,7 +210,7 @@ const Skills = () => {
                   whileInView={{ y: 0 }}
                   transition={{ duration: 0.5, type: "spring" }}
                   whileHover={{ scale: 1.03 }}
-                  className="w-full max-w-full ring-2 ring-zinc-300 border-2 border-solid border-zinc-500 shadow-lg shadow-zinc-200 rounded-3xl py-10 "
+                  className="w-full max-w-full ring-2 ring-zinc-300 border-2 border-solid border-zinc-500 shadow-lg shadow-zinc-200 rounded-3xl py-10 dark:shadow-md dark:border-zinc-500 dark:bg-card dark:text-light dark:ring-zinc-300 dark:shadow-zinc-200"
                 >
                   <div className="text-5xl font-bold text-dark/75 text-center dark:text-light/75">
                     {skill.title}
