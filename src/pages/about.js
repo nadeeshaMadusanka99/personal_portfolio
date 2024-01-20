@@ -12,6 +12,7 @@ import Image from "next/image";
 import Education from "@/components/AboutMe/Education";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import TransitionEffect from "@/components/Common/TransitionEffect";
 
 const About = () => {
   //   const AnimatedNumber = ({ value }) => {
@@ -45,7 +46,7 @@ const About = () => {
           content="nadeesha's portfolio about page"
         />
       </Head>
-      {/* <TransitionEffect /> */}
+      <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-between dark:text-light">
         <Layout className="pt-8">
           <AnimatedText
