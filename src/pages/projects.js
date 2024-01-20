@@ -18,7 +18,7 @@ const project = () => {
         <meta name="description" content="any description" />
       </Head>
       {/* <TransitionEffect /> */}
-      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden">
+      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
             text="Innovation Transcends Expertise! "
