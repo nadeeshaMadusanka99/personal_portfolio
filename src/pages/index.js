@@ -6,7 +6,7 @@ import ProfilePic from "../../public/images/profile/developer-pic-1.png";
 import AnimatedText from "@/components/Common/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Common/Icons";
-import ContactMe from "@/components/Home/ContactMe";
+import ContactMeIcon from "@/components/Home/ContactMeIcon";
 import TransitionEffect from "@/components/Common/TransitionEffect";
 
 export default function Home() {
@@ -57,7 +57,7 @@ export default function Home() {
             </div>
           </div>
         </Layout>
-        <ContactMe />
+        <ContactMeIcon />
       </main>
     </>
   );

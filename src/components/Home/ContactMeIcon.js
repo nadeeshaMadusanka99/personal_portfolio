@@ -3,7 +3,7 @@ import { CircularText } from "../Common/Icons";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const ContactMe = () => {
+const ContactMeIcon = () => {
   const MotionLink = motion(Link);
   return (
     <div
@@ -32,4 +32,4 @@ const ContactMe = () => {
   );
 };
 
-export default ContactMe;
+export default ContactMeIcon;
