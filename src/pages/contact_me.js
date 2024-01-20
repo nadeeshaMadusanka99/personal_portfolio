@@ -68,7 +68,7 @@ const contact_me = () => {
           content="nadeesha's portfolio contact me page"
         />
       </Head>
-      <TransitionEffect />
+      {/* <TransitionEffect /> */}
       <main className="w-full m-8 ">
         <Layout className="pt-8">
           <motion.div
@@ -78,8 +78,7 @@ const contact_me = () => {
             initial="initial"
             whileInView="animate"
           >
-            <motion.div
-            >
+            <motion.div>
               <motion.h1
                 className="text-7xl font-extrabold leading-normal text-right text-black dark:text-light"
                 variants={variants}
@@ -99,7 +98,7 @@ const contact_me = () => {
               </div>
             </motion.div>
             <div className={`flex-1 relative`}>
-              <motion.div
+              {/* <motion.div
                 className={`stroke-3 stroke-primary ml-10 absolute dark:stroke-primaryDark p-2 -z-1`}
                 initial={{ opacity: 1 }}
                 whileInView={{ opacity: 0 }}
@@ -127,46 +126,62 @@ const contact_me = () => {
             C32.666,7.326,25.339,0,16.333,0z"
                   />
                 </svg>
-              </motion.div>
+              </motion.div> */}
 
               <motion.form
                 ref={formRef}
                 onSubmit={sendEmail}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 4, duration: 1 }}
-                className="flex flex-col items-center gap-12"
+                // initial={{ opacity: 0 }}
+                // whileInView={{ opacity: 1 }}
+                // transition={{ delay: 4, duration: 1 }}
+                className="flex flex-col gap-10 z-10"
               >
                 <input
                   type="text"
                   required
                   placeholder="Name"
                   name="name"
-                  className="p-5 w-full rounded-xl border border-zinc-400"
+                  className=" z-20 p-4 rounded-xl border border-zinc-400"
                 />
                 <input
                   type="email"
                   required
                   placeholder="Email"
                   name="email"
-                  className="p-5 w-full  rounded-xl border border-zinc-400 "
+                  className=" z-20 p-4 w-full  rounded-xl border border-zinc-400 "
                 />
                 <textarea
                   rows={8}
                   placeholder="Message"
                   name="message"
-                  className="p-5 w-full  rounded-xl border border-zinc-400"
+                  className=" z-20 p-4 w-full  rounded-xl border border-zinc-400"
                 />
-                <button
-                  type="submit"
-                  className=" bg-dark text-light w-40 h-15  p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light
-                 hover:text-dark border-2 border-solid border-transparent 
-                  hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
-                >
-                  Send
-                </button>
-                {error && "Error"}
-                {success && "Success"}
+                {success ? (
+                  <button
+                    type="submit"
+                    className="z-50 bg-green text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid border-transparent 
+    dark:bg-green  dark:text-light"
+                  >
+                    Successfully Sent
+                  </button>
+                ) : error ? (
+                  <button
+                    type="submit"
+                    className="z-50 bg-error text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid border-transparent 
+    dark:bg-error  dark:text-white"
+                  >
+                    Error Occured
+                  </button>
+                ) : (
+                  <button
+                    type="submit"
+                    className="z-50 bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light
+    hover:text-dark border-2 border-solid border-transparent 
+    hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
+                  >
+                    Send
+                  </button>
+                )}
               </motion.form>
             </div>
           </motion.div>

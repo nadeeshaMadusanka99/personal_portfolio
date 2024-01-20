@@ -157,11 +157,6 @@ const BackContent = styled(CardContent)`
 `;
 
 const Skills = () => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  const handleCardFlip = () => {
-    setIsFlipped(!isFlipped);
-  };
   // return (
   //   <>
   //     <h2 className="font-bold text-8xl mt-20 mb-10 w-full text-center">Skills</h2>
@@ -196,14 +191,12 @@ const Skills = () => {
   return (
     <Container id="skills">
       <Wrapper>
-        <h2 className="font-bold text-7xl text-secondary mb-28 w-full text-center">Skills</h2>
+        <h2 className="font-bold text-7xl text-secondary mb-28 w-full text-center">
+          Skills
+        </h2>
         <SkillsContainer>
           {skills.map((skill, index) => (
-            <SkillCard
-              key={index}
-              onClick={handleCardFlip}
-              className={isFlipped ? "flipped" : ""}
-            >
+            <SkillCard key={index}>
               <FrontContent key={index}>
                 <motion.div
                   initial={{ y: 50 }}
