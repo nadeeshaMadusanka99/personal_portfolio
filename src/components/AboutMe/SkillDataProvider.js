@@ -14,8 +14,12 @@ const SkillDataProvider = ({ src, width, height, index }) => {
   const imageVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
+    hover: { scale: 1.25 },
   };
+
   const animationDelay = 0.2;
+  const hoverTransition = { duration: 0.01 }; 
+
   return (
     <motion.div
       ref={ref}
@@ -23,9 +27,17 @@ const SkillDataProvider = ({ src, width, height, index }) => {
       variants={imageVariants}
       animate={inView ? "visible" : "hidden"}
       custom={index}
-      transition={{ delay: index * animationDelay }}
+      transition={{ delay: index * animationDelay}}
     >
-      <img src={src} width={width} height={height} alt="skill image" />
+      <motion.img
+        src={src}
+        width={width}
+        height={height}
+        whileHover="hover"
+        variants={imageVariants}
+        alt="skill image"
+        style={{ transition: `transform ${hoverTransition.duration}s ease-out`}}
+      />
     </motion.div>
   );
 };
