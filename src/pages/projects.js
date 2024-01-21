@@ -1,15 +1,11 @@
 import React from "react";
 import Head from "next/head";
 
-
 import AnimatedText from "@/components/Common/AnimatedText";
 import Layout from "@/components/Common/Layout";
 import { ProjectCard } from "@/components/Project/ProjectCard";
-// import TransitionEffect from "@/components/TransitionEffect";
 import { dataProject } from "@/content/Projects";
 import TransitionEffect from "@/components/Common/TransitionEffect";
-
-
 
 const project = () => {
   return (
@@ -46,3 +42,4 @@ const project = () => {
 };
 
 export default project;
+

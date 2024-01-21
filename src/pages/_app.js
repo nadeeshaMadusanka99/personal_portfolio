@@ -1,5 +1,6 @@
 import Footer from "@/components/Common/Footer";
 import NavBar from "@/components/Common/NavBar";
+import Cursor from "@/components/Cursor/cursor";
 import "@/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
 import { Montserrat } from "next/font/google";
@@ -23,6 +24,7 @@ export default function App({ Component, pageProps }) {
         className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}
       >
         <NavBar />
+        <Cursor />
         <AnimatePresence mode="wait">
           <Component key={router.asPath} {...pageProps} />
         </AnimatePresence>

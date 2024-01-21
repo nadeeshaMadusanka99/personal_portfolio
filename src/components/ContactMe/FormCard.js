@@ -23,8 +23,6 @@ const FormCard = () => {
         },
         (error) => {
           setError(true);
-          console.log("error only:", error);
-          console.log(error.text);
         }
       );
   };
