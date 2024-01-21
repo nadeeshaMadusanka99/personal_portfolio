@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React from "react";
@@ -14,7 +15,6 @@ const SkillDataProvider = ({ src, width, height, index }) => {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
-
   const animationDelay = 0.3;
   return (
     <motion.div
@@ -25,7 +25,7 @@ const SkillDataProvider = ({ src, width, height, index }) => {
       custom={index}
       transition={{ delay: index * animationDelay }}
     >
-      <Image src={src} width={width} height={height} alt="skill image" />
+      <img src={src} width={width} height={height} alt="skill image" />
     </motion.div>
   );
 };

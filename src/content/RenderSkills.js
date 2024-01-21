@@ -1,4 +1,6 @@
-export const Frontend_skills = [
+import { framer, headless } from "@/imports";
+
+export const row1 = [
   {
     name: "HTML",
     image: "https://skillicons.dev/icons?i=html",
@@ -40,8 +42,7 @@ export const Frontend_skills = [
     image: "https://skillicons.dev/icons?i=bootstrap	",
   },
 ];
-
-export const backend_skills = [
+export const row2 = [
   {
     name: "Node Js",
     image: "https://skillicons.dev/icons?i=nodejs",
@@ -53,6 +54,10 @@ export const backend_skills = [
   {
     name: "Python",
     image: "https://skillicons.dev/icons?i=py",
+  },
+  {
+    name: "Headless UI",
+    image: headless.src,
   },
   {
     name: "Java",
@@ -71,8 +76,7 @@ export const backend_skills = [
     image: "https://skillicons.dev/icons?i=postgres",
   },
 ];
-
-export const Other_skills = [
+export const row3 = [
   {
     name: "Git",
     image: "https://skillicons.dev/icons?i=git",
@@ -99,7 +103,8 @@ export const Other_skills = [
     name: "Selenium",
     image: "https://skillicons.dev/icons?i=selenium	",
   },
-
+];
+export const row4 = [
   {
     name: "Figma",
     image: "https://skillicons.dev/icons?i=figma",
@@ -111,5 +116,11 @@ export const Other_skills = [
   {
     name: "Adobe Illustrator",
     image: "https://skillicons.dev/icons?i=ai",
+  },
+];
+export const row5 = [
+  {
+    name: "Framer Motion",
+    image: framer.src,
   },
 ];

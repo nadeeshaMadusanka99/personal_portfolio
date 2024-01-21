@@ -154,7 +154,7 @@
 // `;
 
 // const Skills = () => {
- 
+
 //   // return (
 //   //   <>
 //   //     <h2 className="font-bold text-8xl mt-20 mb-10 w-full text-center">Skills</h2>
@@ -224,7 +224,7 @@
 //                   // whileHover={{ scale: 1.03 }}
 //                   className="w-full max-w-full ring-2 ring-zinc-300 bg-card border-2 border-solid border-zinc-500 shadow-lg shadow-zinc-200 rounded-3xl p-6"
 //                 >
-                  
+
 //                 </motion.div>
 //               </BackContent> */}
 //             </SkillCard>
@@ -237,244 +237,18 @@
 
 // export default Skills;
 
-
 import React from "react";
+import styled from "styled-components";
 import SkillDataProvider from "./SkillDataProvider";
+import {
+  row1,
+  row2,
+  row3,
+  row4,
+  row5,
+} from "@/content/RenderSkills";
+import Image from "next/image";
 
-
-export const Frontend_skill = [
-  {
-    skill_name: "Html 5",
-    Image: "/html.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Css",
-    Image: "/css.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Java Script",
-    Image: "/js.png",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Tailwind Css",
-    Image: "/tailwind.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Material UI",
-    Image: "/mui.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React",
-    Image: "/react.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Redux",
-    Image: "/redux.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React Query",
-    Image: "/reactquery.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Type Script",
-    Image: "/ts.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Next js 13",
-    Image: "/next.png",
-    width: 80,
-    height: 80,
-  },
-];
-
-export const Backend_skill = [
-  {
-    skill_name: "Node js",
-    Image: "/node-js.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Express js",
-    Image: "/express.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Mongo db",
-    Image: "/mongodb.png",
-    width: 40,
-    height: 40,
-  },
-  {
-    skill_name: "Fire base",
-    Image: "/Firebase.png",
-    width: 55,
-    height: 55,
-  },
-  {
-    skill_name: "Postger SQL",
-    Image: "/postger.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "My SQL",
-    Image: "/mysql.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Prisma",
-    Image: "/prisma.webp",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Graphql",
-    Image: "/graphql.png",
-    width: 80,
-    height: 80,
-  },
-];
-
-export const Full_stack = [
-  {
-    skill_name: "React Native",
-    Image: "/ReactNative .png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Tauri",
-    Image: "/tauri.svg",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Docker",
-    Image: "/docker.webp",
-    width: 70,
-    height: 70,
-  },
-
-  {
-    skill_name: "Figma",
-    Image: "/figma.png",
-    width: 50,
-    height: 50,
-  },
-
-];
-
-export const Other_skill = [
-  {
-    skill_name: "Go",
-    Image: "/go.png",
-    width: 60,
-    height: 60,
-  },
-];
-
-export const Skill_data = [
-  {
-    skill_name: "Html 5",
-    Image: "/html.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Css",
-    Image: "/css.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Java Script",
-    Image: "/js.png",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Tailwind Css",
-    Image: "/tailwind.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React",
-    Image: "/react.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Redux",
-    Image: "/redux.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React Query",
-    Image: "/reactquery.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Type Script",
-    Image: "/ts.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Next js 13",
-    Image: "/next.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Framer Motion",
-    Image: "/framer.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Stripe Payment",
-    Image: "/stripe.webp",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Node js",
-    Image: "/node-js.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Mongo db",
-    Image: "/mongodb.png",
-    width: 40,
-    height: 40,
-  },
-
-];
 
 const Skills = () => {
   return (
@@ -483,75 +257,65 @@ const Skills = () => {
       className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-80 py-20"
       style={{ transform: "scale(0.9" }}
     >
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Skill_data.map((image, index) => (
+    <h2 className="font-bold text-7xl text-secondary mb-28 w-full text-center">Technologies</h2>
+      <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
+        {row1.map((image, index) => (
           <SkillDataProvider
             key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
+            src={image.image}
+            width={70}
+            height={70}
             index={index}
           />
         ))}
       </div>
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Frontend_skill.map((image, index) => (
+      <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
+        {row2.map((image, index) => (
           <SkillDataProvider
             key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
+            src={image.image}
+            width={70}
+            height={70}
             index={index}
           />
         ))}
       </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Backend_skill.map((image, index) => (
+      <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
+        {row3.map((image, index) => (
+          console.log(image.image),
           <SkillDataProvider
             key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
+            src={image.image}
+            width={70}
+            height={70}
             index={index}
           />
         ))}
       </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Full_stack.map((image, index) => (
+      <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
+        {row4.map((image, index) => (
+          console.log(image.image),
           <SkillDataProvider
             key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
+            src={image.image}
+            width={70}
+            height={70}
             index={index}
           />
         ))}
       </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Other_skill.map((image, index) => (
+      <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
+        {row5.map((image, index) => (
+          console.log(image.image),
           <SkillDataProvider
             key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
+            src={image.image}
+            width={70}
+            height={70}
             index={index}
           />
         ))}
-      </div>
-
-      <div className="w-full h-full absolute">
-        <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
-          <video
-            className="w-full h-auto"
-            preload="false"
-            playsInline
-            loop
-            muted
-            autoPlay
-            src="/cards-video.webm"
-          />
-        </div>
       </div>
     </section>
   );

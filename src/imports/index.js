@@ -12,3 +12,7 @@ export { default as profilePic } from "@/assets/images/profile/avatar.png";
 
 //* IMPORT IMAGE HOME
 export { default as profilePicHome } from "@/assets/images/profile/developer-pic-1.png";
+
+//* IMPORT IMAGE SKILLS
+export { default as framer } from "@/assets/images/skills/framer.png";
+export { default as headless } from "@/assets/images/skills/headlessUI.png";
