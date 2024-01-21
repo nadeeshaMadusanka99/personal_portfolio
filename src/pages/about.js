@@ -83,11 +83,14 @@ const About = () => {
                   hidden: { opacity: 0.5, scale: 0.9 },
                   visible: { opacity: 1, scale: 1 },
                 }}
-                transition={{ duration: 1.5 }}              >
+                transition={{ duration: 1.5 }}
+              >
                 <Image
                   src={profilePic}
                   alt="NadeeshaMadusanka"
                   className="w-[25rem] h-[30rem] rounded-2xl"
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                 />
               </motion.div>
             </div>
