@@ -240,15 +240,8 @@
 import React from "react";
 import styled from "styled-components";
 import SkillDataProvider from "./SkillDataProvider";
-import {
-  row1,
-  row2,
-  row3,
-  row4,
-  row5,
-} from "@/content/RenderSkills";
-import Image from "next/image";
-
+import { motion } from "framer-motion";
+import { row1, row2, row3, row4, row5 } from "@/content/RenderSkills";
 
 const Skills = () => {
   return (
@@ -257,7 +250,15 @@ const Skills = () => {
       className="flex flex-col items-center justify-center gap-5 h-full relative overflow-hidden py-20"
       style={{ transform: "scale(0.9" }}
     >
-    <h2 className="font-bold text-7xl text-secondary mb-20 w-full text-center">Tech Stack</h2>
+      <motion.h2
+        initial={{ y: 50 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 1.3, type: "spring" }}
+        viewport={{once:true}}
+        className="font-bold text-7xl text-secondary mb-20 w-full text-center"
+      >
+        Tech Stack
+      </motion.h2>
       <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
         {row1.map((image, index) => (
           <SkillDataProvider
@@ -282,40 +283,52 @@ const Skills = () => {
         ))}
       </div>
       <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
-        {row3.map((image, index) => (
-          console.log(image.image),
-          <SkillDataProvider
-            key={index}
-            src={image.image}
-            width={70}
-            height={70}
-            index={index}
-          />
-        ))}
+        {row3.map(
+          (image, index) => (
+            console.log(image.image),
+            (
+              <SkillDataProvider
+                key={index}
+                src={image.image}
+                width={70}
+                height={70}
+                index={index}
+              />
+            )
+          )
+        )}
       </div>
       <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
-        {row4.map((image, index) => (
-          console.log(image.image),
-          <SkillDataProvider
-            key={index}
-            src={image.image}
-            width={70}
-            height={70}
-            index={index}
-          />
-        ))}
+        {row4.map(
+          (image, index) => (
+            console.log(image.image),
+            (
+              <SkillDataProvider
+                key={index}
+                src={image.image}
+                width={70}
+                height={70}
+                index={index}
+              />
+            )
+          )
+        )}
       </div>
       <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
-        {row5.map((image, index) => (
-          console.log(image.image),
-          <SkillDataProvider
-            key={index}
-            src={image.image}
-            width={70}
-            height={70}
-            index={index}
-          />
-        ))}
+        {row5.map(
+          (image, index) => (
+            console.log(image.image),
+            (
+              <SkillDataProvider
+                key={index}
+                src={image.image}
+                width={70}
+                height={70}
+                index={index}
+              />
+            )
+          )
+        )}
       </div>
     </section>
   );
