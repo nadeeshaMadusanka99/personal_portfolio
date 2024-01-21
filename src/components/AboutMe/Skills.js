@@ -254,10 +254,10 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-80 py-20"
+      className="flex flex-col items-center justify-center gap-5 h-full relative overflow-hidden py-20"
       style={{ transform: "scale(0.9" }}
     >
-    <h2 className="font-bold text-7xl text-secondary mb-28 w-full text-center">Technologies</h2>
+    <h2 className="font-bold text-7xl text-secondary mb-20 w-full text-center">Tech Stack</h2>
       <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
         {row1.map((image, index) => (
           <SkillDataProvider
