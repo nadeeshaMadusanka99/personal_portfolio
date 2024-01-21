@@ -59,7 +59,7 @@ const FormCard = () => {
                 {success ? (
                   <button
                     type="submit"
-                    className="z-50 bg-green text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid border-transparent 
+                    className="z-20 bg-green text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid border-transparent 
     dark:bg-green  dark:text-dark"
                   >
                     Successfully Sent
@@ -67,7 +67,7 @@ const FormCard = () => {
                 ) : error ? (
                   <button
                     type="submit"
-                    className="z-50 bg-error text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid border-transparent 
+                    className="z-20 bg-error text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid border-transparent 
     dark:bg-error  dark:text-white"
                   >
                     Error Occured
@@ -75,7 +75,7 @@ const FormCard = () => {
                 ) : (
                   <button
                     type="submit"
-                    className="z-50 bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light
+                    className="z-20 bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light
     hover:text-dark border-2 border-solid border-transparent 
     hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
                   >
