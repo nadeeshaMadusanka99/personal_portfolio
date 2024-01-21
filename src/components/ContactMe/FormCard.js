@@ -43,26 +43,26 @@ const FormCard = () => {
                   required
                   placeholder="Name"
                   name="name"
-                  className=" z-20 p-4 rounded-xl border border-zinc-400"
+                  className=" z-20 p-4 rounded-xl border border-zinc-400 dark:bg-black"
                 />
                 <input
                   type="email"
                   required
                   placeholder="Email"
                   name="email"
-                  className=" z-20 p-4 w-full  rounded-xl border border-zinc-400 "
+                  className=" z-20 p-4 w-full  rounded-xl border border-zinc-400 dark:bg-black"
                 />
                 <textarea
                   rows={8}
                   placeholder="Message"
                   name="message"
-                  className=" z-20 p-4 w-full  rounded-xl border border-zinc-400"
+                  className=" z-20 p-4 w-full  rounded-xl border border-zinc-400 dark:bg-black"
                 />
                 {success ? (
                   <button
                     type="submit"
                     className="z-50 bg-green text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid border-transparent 
-    dark:bg-green  dark:text-light"
+    dark:bg-green  dark:text-dark"
                   >
                     Successfully Sent
                   </button>
