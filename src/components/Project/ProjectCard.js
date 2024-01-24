@@ -7,10 +7,10 @@ const FramerImage = motion(Image);
 export const ProjectCard = ({ type, img, title, summary, link, github }) => {
   return (
     <motion.article
-      initial={{ y: 50 } }
-      whileInView={{ y: 0 }}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
-      viewport={{once:true}}
+      viewport={{ once: true }}
       className="w-full flex items-center justify-between  rounded-3xl relative
       ring-2 ring-zinc-300 border-2 border-solid border-zinc-500 shadow-lg shadow-zinc-200  p-12 rounded-br-2xl dark:shadow-md dark:border-zinc-500 dark:bg-card dark:text-light dark:ring-zinc-300 dark:shadow-zinc-200"
     >
@@ -35,7 +35,9 @@ export const ProjectCard = ({ type, img, title, summary, link, github }) => {
         />
       </Link>
       <div className="w-1/2 flex flex-col items-start justify-between pl-6 ">
-        <span className="text-primary font-medium text-xl dark:text-primaryDark">{type}</span>
+        <span className="text-primary font-medium text-xl dark:text-primaryDark">
+          {type}
+        </span>
         <Link
           href={link}
           target="_blank"
