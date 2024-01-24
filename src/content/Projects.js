@@ -11,18 +11,6 @@ import {
 export const dataProject = [
   {
     id: uuid(),
-    title: "TravelGo Website",
-    summary:
-      "A streamlined train booking system offering seat selection, fair pricing, and a seamless booking experience for your rail journeys. Done with PERN(PostgreSQL, ExpressJS, React, Node.js) Stack. ",
-    link: "http://travelgo.ecodeit.com:13000/",
-    github: "https://github.com/nadeeshaMadusanka99/TravelGo-Frontend",
-    type: "Featured Project",
-    img: project1,
-    styles: "col-span-12",
-
-  },
-  {
-    id: uuid(),
     title: "CarHub Web Application",
     summary:
       "CarHub Car Showcase is a sleek web app for exploring a wide range of car models. Discover detailed info, high-quality images, and key features of your favorite cars in one place.",
@@ -42,6 +30,18 @@ export const dataProject = [
     type: "Website",
     img: project2,
     styles: "col-span-12 ",
+  },
+  {
+    id: uuid(),
+    title: "TravelGo Website",
+    summary:
+      "A streamlined train booking system offering seat selection, fair pricing, and a seamless booking experience for your rail journeys. Used Stack is PERN(PostgreSQL, ExpressJS, React, Node.js) ",
+    link: "http://travelgo.ecodeit.com:13000/",
+    github: "https://github.com/nadeeshaMadusanka99/TravelGo-Frontend",
+    type: "Featured Project",
+    img: project1,
+    styles: "col-span-12",
+
   },
   {
     id: uuid(),
