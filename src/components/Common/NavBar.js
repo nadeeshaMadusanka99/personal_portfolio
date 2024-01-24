@@ -30,8 +30,33 @@ const CustomLink = ({ href, title, className = "" }) => {
 
 const NavBar = () => {
   const [mode, setMode] = useThemeSwitcher();
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light">
+      <button
+        className=" flex-col justify-center items-center  "
+        onClick={handleClick}
+      >
+        <span
+          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+            isOpen ? `rotate-45 translate-y-1` : `-translate-y-0.5`
+          }`}
+        ></span>
+        <span
+          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
+            isOpen ? `opacity-0` : `opacity-100`
+          }`}
+        ></span>
+        <span
+          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+            isOpen ? `-rotate-45 -translate-y-1` : `translate-y-0.5`
+          }`}
+        ></span>
+      </button>
       <nav>
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About Me" className="mx-4" />
@@ -74,7 +99,11 @@ const NavBar = () => {
           whileTap={{ scale: 0.9 }}
           className="ml-3 w-6"
         >
-        {mode==="dark" ? <MediumIcon className={"fill-light"} /> : <MediumIcon className={"fill-dark"} /> }
+          {mode === "dark" ? (
+            <MediumIcon className={"fill-light"} />
+          ) : (
+            <MediumIcon className={"fill-dark"} />
+          )}
         </motion.a>
         {/* <motion.div
           initial={{ height: 0 }}
@@ -86,17 +115,17 @@ const NavBar = () => {
         /> */}
 
         <button
-              onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`ml-4 flex items-center justify-center rounded-full p-1 ${
-                mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
-              }`}
-            >
-              {mode === "dark" ? (
-                <SunIcon className={"fill-dark"} />
-              ) : (
-                <MoonIcon className={"fill-dark"} />
-              )}
-            </button>
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+          className={`ml-4 flex items-center justify-center rounded-full p-1 ${
+            mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+          }`}
+        >
+          {mode === "dark" ? (
+            <SunIcon className={"fill-dark"} />
+          ) : (
+            <MoonIcon className={"fill-dark"} />
+          )}
+        </button>
       </nav>
     </header>
   );
