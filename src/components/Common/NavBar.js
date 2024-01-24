@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   MediumIcon,
   FacebookIcon,
@@ -54,16 +54,32 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 };
 const NavBar = () => {
   const [mode, setMode] = useThemeSwitcher();
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const popUP = useRef(null);
 
-  const handleClick = () => {
+  useEffect(() => {
+    if (!isOpen) return;
+    function handleClickOutside(event) {
+      if (popUP.current && !popUP.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+    window.addEventListener("click", handleClickOutside);
+    // clean up
+    return () => window.removeEventListener("click", handleClickOutside);
+  }, [isOpen]);
+
+  const handleClick = (e) => {
+    console.log("clicked");
+    console.log(isOpen);
     setIsOpen(!isOpen);
+    e.stopPropagation();
   };
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light">
       <button
         className=" flex-col justify-center items-center hidden lg:flex"
-        onClick={handleClick}
+        onClick={(e) => handleClick(e)}
       >
         <span
           className={`bg-dark dark:bg-light block transition-all duration-400 ease-out h-0.5 w-6 rounded-sm ${
@@ -147,6 +163,7 @@ const NavBar = () => {
       {isOpen ? (
         <motion.div
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
+          ref={popUP}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.4 }}
           className="min-w-[70vw] flex flex-col justify-center z-30 items-center fixed top-1/2 
