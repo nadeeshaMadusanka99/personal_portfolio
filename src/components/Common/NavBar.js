@@ -148,43 +148,36 @@ const NavBar = () => {
         <motion.div
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
           animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.4 }}
           className="min-w-[70vw] flex flex-col justify-center z-30 items-center fixed top-1/2 
          left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
         >
           <nav className="flex items-center flex-col justify-center">
-            <CustomMobileLink
-              toggle={handleClick}
-              href="/"
-              title="Home"
-              className="mr-4"
-            />
+            <CustomMobileLink toggle={handleClick} href="/" title="Home" />
             <CustomMobileLink
               toggle={handleClick}
               href="/about"
               title="About Me"
-              className="mx-4"
             />
             <CustomMobileLink
               toggle={handleClick}
               href="/projects"
               title="Projects"
-              className="mx-4"
             />
             <CustomMobileLink
               toggle={handleClick}
               href="/contact_me"
               title="Contact Me"
-              className="ml-4"
             />
           </nav>
 
-          <nav className="flex items-center justify-center flex-wrap mt-2">
+          <nav className="flex items-center justify-center flex-wrap mt-5">
             <motion.a
               href="https://www.facebook.com/nadeesha.madusanka.5648/"
               target={"_blank"}
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.9 }}
-              className="w-8 mx-5 sm:mx-1"
+              className="w-8 mx-5 sm:mx-1.5 "
             >
               <FacebookIcon />
             </motion.a>
@@ -193,7 +186,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.9 }}
-              className="w-8 mx-5 bg-light rounded-full dark:bg-dark sm:mx-1"
+              className="w-8 mx-5 bg-light rounded-full dark:bg-dark sm:mx-1.5"
             >
               <GithubIcon />
             </motion.a>
@@ -202,7 +195,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.9 }}
-              className="w-8 mx-5 sm:mx-1"
+              className="w-8 mx-5 sm:mx-1.5"
             >
               <LinkedInIcon />
             </motion.a>
@@ -211,12 +204,12 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.9 }}
-              className="w-8 mx-5 sm:mx-1"
+              className="w-8 mx-5 sm:mx-1.5"
             >
               {mode === "dark" ? (
-                <MediumIcon className={"fill-light"} />
-              ) : (
                 <MediumIcon className={"fill-dark"} />
+              ) : (
+                <MediumIcon className={"fill-light"} />
               )}
             </motion.a>
             <button
@@ -226,7 +219,7 @@ const NavBar = () => {
               }`}
             >
               {mode === "dark" ? (
-                <SunIcon className={"fill-dark"} />
+                <SunIcon className={"fill-dark lg:w-6 lg:h-6"} />
               ) : (
                 <MoonIcon className={"fill-dark"} />
               )}
