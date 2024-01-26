@@ -46,20 +46,20 @@ const FormCard = () => {
         required
         placeholder="Name"
         name="name"
-        className=" z-20 p-4 rounded-xl border border-zinc-400 dark:bg-black"
+        className=" z-20 p-4 rounded-xl border border-zinc-400 dark:bg-black dark:text-white"
       />
       <input
         type="email"
         required
         placeholder="Email"
         name="email"
-        className=" z-20 p-4 w-full  rounded-xl border border-zinc-400 dark:bg-black"
+        className=" z-20 p-4 w-full  rounded-xl border border-zinc-400 dark:bg-black dark:text-white"
       />
       <textarea
         rows={8}
         placeholder="Message"
         name="message"
-        className=" z-20 p-4 w-full  rounded-xl border border-zinc-400 dark:bg-black"
+        className=" z-20 p-4 w-full  rounded-xl border border-zinc-400 dark:bg-black dark:text-white"
       />
       {loading ? (
         <p className="z-20 text-dark">Sending...</p>
@@ -67,7 +67,7 @@ const FormCard = () => {
         <button
           type="submit"
           disabled
-          className="z-20 bg-green text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid border-white hover:border-black 
+          className="z-20 bg-green text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid border-black dark:border-white 
     dark:bg-green  dark:text-dark "
         >
           Successfully Sent
@@ -76,7 +76,7 @@ const FormCard = () => {
         <button
           disabled
           type="submit"
-          className="z-20 bg-error text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid border-transparent 
+          className="z-20 bg-error text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid dark:border-white 
     dark:bg-error  dark:text-white"
         >
           Error Occured
