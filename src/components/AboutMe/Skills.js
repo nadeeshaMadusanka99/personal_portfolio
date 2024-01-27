@@ -3,6 +3,7 @@ import SkillDataProvider from "./SkillDataProvider";
 import { motion } from "framer-motion";
 import { mobileRender, row1, row2, row3, row4, row5 } from "@/content/RenderSkills";
 import { useMediaQuery } from "react-responsive";
+import SkillDataProviderMobile from "./SkillDataProviderMobile";
 
 const Skills = () => {
   const isSmallScreen = useMediaQuery({ query: "(max-width: 1120px)" });
@@ -25,7 +26,7 @@ const Skills = () => {
       {isSmallScreen ? (
         <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
           {mobileRender.map((image, index) => (
-            <SkillDataProvider
+            <SkillDataProviderMobile
               key={index}
               src={image.image}
               width={70}
