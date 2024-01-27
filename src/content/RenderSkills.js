@@ -54,10 +54,7 @@ export const row2 = [
     image: "https://skillicons.dev/icons?i=materialui",
   },
 
-  {
-    name: "Framer Motion",
-    image: framer.src,
-  },
+  
   {
     name: "Python",
     image: "https://skillicons.dev/icons?i=py",
@@ -68,16 +65,20 @@ export const row2 = [
     image: "https://skillicons.dev/icons?i=java",
   },
   {
-    name: "MongoDB",
-    image: "https://skillicons.dev/icons?i=mongodb",
-  },
-  {
     name: "MySQL",
     image: "https://skillicons.dev/icons?i=mysql",
   },
   {
     name: "PostgreSQL",
     image: "https://skillicons.dev/icons?i=postgres",
+  },
+  {
+    name: "MongoDB",
+    image: "https://skillicons.dev/icons?i=mongodb",
+  },
+  {
+    name: "Firebase",
+    image: "https://skillicons.dev/icons?i=firebase",
   },
 ];
 export const row3 = [
@@ -109,6 +110,10 @@ export const row3 = [
 ];
 export const row4 = [
   {
+    name: "Framer Motion",
+    image: framer.src,
+  },
+  {
     name: "Headless UI",
     image: headless.src,
   },
@@ -120,15 +125,16 @@ export const row4 = [
     name: "Adobe Photoshop",
     image: "https://skillicons.dev/icons?i=ps",
   },
-  {
-    name: "Adobe Illustrator",
-    image: "https://skillicons.dev/icons?i=ai",
-  },
+  
 ];
 export const row5 = [
   {
     name: "Figma",
     image: "https://skillicons.dev/icons?i=figma",
+  },
+  {
+    name: "Adobe Illustrator",
+    image: "https://skillicons.dev/icons?i=ai",
   },
 ];
 
