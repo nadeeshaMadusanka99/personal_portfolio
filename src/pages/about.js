@@ -34,11 +34,11 @@ const About = () => {
 
           <div className="grid w-full grid-cols-12 gap-16 sm:grid-cols-12 sm:gap-6 ">
             <div className="col-span-6 flex flex-col items-start justify-start mt-10  xl:col-span-4 md:order-2 md:col-span-12 ">
-              <h2 className="mb-4 text-xl font-bold uppercase text-dark/75 dark:text-light/75 sm:mb-2">
+              <h2 className="mb-4 text-xl font-bold uppercase text-dark/75 dark:text-light/75 md:text-xl sm:mb-2 ">
                 BIOGRAPHY
               </h2>
               {DataContent.map((data, id) => (
-                <p key={id} className=" my-2 text-lg">
+                <p key={id} className=" my-2 text-lg md:text-base">
                   {data.type}
                 </p>
               ))}
@@ -79,7 +79,6 @@ const About = () => {
             </div>
           </div>
           <Skills />
-          {/* <Experience /> */}
           <Education />
         </Layout>
       </main>
