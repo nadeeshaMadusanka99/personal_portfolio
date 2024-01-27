@@ -71,7 +71,7 @@ const About = () => {
                 <Image
                   src={profilePic}
                   alt="NadeeshaMadusanka"
-                  className="w-[25rem] h-[31rem] rounded-2xl sm:h-[21rem]"
+                  className="w-[25rem] h-[31rem] rounded-2xl sm:h-[22rem]"
                   priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw "
                 />

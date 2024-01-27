@@ -76,8 +76,8 @@ const FormCard = () => {
         <button
           disabled
           type="submit"
-          className="z-20 bg-error text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid dark:border-white 
-    dark:bg-error  dark:text-white"
+          className="z-20 bg-error text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid border-dark dark:border-white 
+    dark:bg-error  dark:text-dark"
         >
           Error Occured
         </button>

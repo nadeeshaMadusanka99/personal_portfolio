@@ -1,5 +1,6 @@
 import { framer, headless, reactNative } from "@/imports";
 
+
 export const row1 = [
   {
     name: "HTML",
@@ -37,7 +38,7 @@ export const row1 = [
     name: "Tailwind-CSS",
     image: "https://skillicons.dev/icons?i=tailwind",
   },
-
+  
   {
     name: "Node Js",
     image: "https://skillicons.dev/icons?i=nodejs",
@@ -61,7 +62,7 @@ export const row2 = [
     name: "Python",
     image: "https://skillicons.dev/icons?i=py",
   },
-
+  
   {
     name: "Java",
     image: "https://skillicons.dev/icons?i=java",
@@ -96,7 +97,7 @@ export const row3 = [
     name: "Netlify",
     image: "https://skillicons.dev/icons?i=netlify",
   },
-
+  
   {
     name: "Postman",
     image: "https://skillicons.dev/icons?i=postman",
@@ -130,3 +131,5 @@ export const row5 = [
     image: "https://skillicons.dev/icons?i=figma",
   },
 ];
+
+export const mobileRender =[...row1,...row2,...row3,...row4,...row5]
