@@ -1,5 +1,6 @@
 import { framer, headless, reactNative } from "@/imports";
 
+
 export const row1 = [
   {
     name: "HTML",
@@ -37,7 +38,7 @@ export const row1 = [
     name: "Tailwind-CSS",
     image: "https://skillicons.dev/icons?i=tailwind",
   },
-
+  
   {
     name: "Node Js",
     image: "https://skillicons.dev/icons?i=nodejs",
@@ -53,22 +54,15 @@ export const row2 = [
     image: "https://skillicons.dev/icons?i=materialui",
   },
 
-  {
-    name: "Framer Motion",
-    image: framer.src,
-  },
+  
   {
     name: "Python",
     image: "https://skillicons.dev/icons?i=py",
   },
-
+  
   {
     name: "Java",
     image: "https://skillicons.dev/icons?i=java",
-  },
-  {
-    name: "MongoDB",
-    image: "https://skillicons.dev/icons?i=mongodb",
   },
   {
     name: "MySQL",
@@ -77,6 +71,14 @@ export const row2 = [
   {
     name: "PostgreSQL",
     image: "https://skillicons.dev/icons?i=postgres",
+  },
+  {
+    name: "MongoDB",
+    image: "https://skillicons.dev/icons?i=mongodb",
+  },
+  {
+    name: "Firebase",
+    image: "https://skillicons.dev/icons?i=firebase",
   },
 ];
 export const row3 = [
@@ -96,7 +98,7 @@ export const row3 = [
     name: "Netlify",
     image: "https://skillicons.dev/icons?i=netlify",
   },
-
+  
   {
     name: "Postman",
     image: "https://skillicons.dev/icons?i=postman",
@@ -107,6 +109,10 @@ export const row3 = [
   },
 ];
 export const row4 = [
+  {
+    name: "Framer Motion",
+    image: framer.src,
+  },
   {
     name: "Headless UI",
     image: headless.src,
@@ -119,14 +125,17 @@ export const row4 = [
     name: "Adobe Photoshop",
     image: "https://skillicons.dev/icons?i=ps",
   },
-  {
-    name: "Adobe Illustrator",
-    image: "https://skillicons.dev/icons?i=ai",
-  },
+  
 ];
 export const row5 = [
   {
     name: "Figma",
     image: "https://skillicons.dev/icons?i=figma",
   },
+  {
+    name: "Adobe Illustrator",
+    image: "https://skillicons.dev/icons?i=ai",
+  },
 ];
+
+export const mobileRender =[...row1,...row2,...row3,...row4,...row5]
