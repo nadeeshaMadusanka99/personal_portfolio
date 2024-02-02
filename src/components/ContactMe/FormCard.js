@@ -1,11 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { Bounce, ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useThemeSwitcher from "../Hooks/useThemeSwitcher";
 
 const FormCard = () => {
   const formRef = useRef();
+  const [mode] = useThemeSwitcher();
+  console.log(mode);
 
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -27,7 +30,7 @@ const FormCard = () => {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "light",
+      theme: mode === "dark" ? "dark" : "light",
     });
 
     emailjs
@@ -56,8 +59,9 @@ const FormCard = () => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: mode === "dark" ? "dark" : "light",
       });
+      setSuccess(false);
     }
     if (error) {
       toast.error("Something went wrong!", {
@@ -68,10 +72,11 @@ const FormCard = () => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: mode === "dark" ? "dark" : "light",
       });
+      setError(false);
     }
-  }, [success, error]);
+  }, [success, error, mode]);
 
   return (
     <>
@@ -123,7 +128,7 @@ const FormCard = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="light"
+        theme={mode === "dark" ? "dark" : "light"}
       />
     </>
   );
