@@ -9,7 +9,6 @@ const FormCard = () => {
 
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   // useEffect(() => {
   //   return () => {
@@ -20,7 +19,16 @@ const FormCard = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setLoading(true);
+    toast.info("Message Sending...", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
 
     emailjs
       .sendForm(
@@ -36,10 +44,7 @@ const FormCard = () => {
         (error) => {
           setError(true);
         }
-      )
-      .finally(() => {
-        setLoading(false);
-      });
+      );
   };
   useEffect(() => {
     if (success) {
