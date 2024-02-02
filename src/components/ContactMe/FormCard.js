@@ -1,6 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const FormCard = () => {
   const formRef = useRef();
@@ -8,6 +10,14 @@ const FormCard = () => {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  // useEffect(() => {
+  //   return () => {
+  //     // Clear toasts on component unmount
+  //     toast.dismiss();
+  //   };
+  // }, []);
+
   const sendEmail = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -31,57 +41,51 @@ const FormCard = () => {
         setLoading(false);
       });
   };
-
+  useEffect(() => {
+    if (success) {
+      toast.success("Message sent successfully!", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  }, [success]);
   return (
-    <motion.form
-      ref={formRef}
-      onSubmit={sendEmail}
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ delay: 4, duration: 1 }}
-      className="flex flex-col gap-10 z-10"
-    >
-      <input
-        type="text"
-        required
-        placeholder="Name"
-        name="name"
-        className=" z-20 p-4 rounded-xl border border-zinc-400 dark:bg-black dark:text-white"
-      />
-      <input
-        type="email"
-        required
-        placeholder="Email"
-        name="email"
-        className=" z-20 p-4 w-full  rounded-xl border border-zinc-400 dark:bg-black dark:text-white"
-      />
-      <textarea
-        rows={8}
-        placeholder="Message"
-        name="message"
-        className=" z-20 p-4 w-full  rounded-xl border border-zinc-400 dark:bg-black dark:text-white"
-      />
-      {loading ? (
-        <p className="z-20 text-dark">Sending...</p>
-      ) : success ? (
-        <button
-          type="submit"
-          disabled
-          className="z-20 bg-green text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid border-black dark:border-white 
-    dark:bg-green  dark:text-dark "
-        >
-          Successfully Sent
-        </button>
-      ) : error ? (
-        <button
-          disabled
-          type="submit"
-          className="z-20 bg-error text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid border-dark dark:border-white 
-    dark:bg-error  dark:text-dark"
-        >
-          Error Occured
-        </button>
-      ) : (
+    <>
+      <motion.form
+        ref={formRef}
+        onSubmit={sendEmail}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 4, duration: 1 }}
+        className="flex flex-col gap-10 z-10"
+      >
+        <input
+          type="text"
+          required
+          placeholder="Name"
+          name="name"
+          className=" z-20 p-4 rounded-xl border border-zinc-400 dark:bg-black dark:text-white"
+        />
+        <input
+          type="email"
+          required
+          placeholder="Email"
+          name="email"
+          className=" z-20 p-4 w-full  rounded-xl border border-zinc-400 dark:bg-black dark:text-white"
+        />
+        <textarea
+          rows={8}
+          placeholder="Message"
+          name="message"
+          className=" z-20 p-4 w-full  rounded-xl border border-zinc-400 dark:bg-black dark:text-white"
+        />
+
         <button
           type="submit"
           className="z-20 bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light
@@ -90,8 +94,20 @@ const FormCard = () => {
         >
           Send
         </button>
-      )}
-    </motion.form>
+      </motion.form>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+    </>
   );
 };
 

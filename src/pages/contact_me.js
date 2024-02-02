@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import AnimatedText from "@/components/Common/AnimatedText";
 import Layout from "@/components/Common/Layout";
 import TransitionEffect from "@/components/Common/TransitionEffect";
 import Head from "next/head";
