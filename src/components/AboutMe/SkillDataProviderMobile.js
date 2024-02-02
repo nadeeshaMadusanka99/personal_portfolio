@@ -16,7 +16,7 @@ const SkillDataProviderMobile = ({ src, index }) => {
     tap: { scale: 1.2 },
   };
 
-  const animationDelay = 0.7;
+  const animationDelay = 0.4;
   const tapTransition = { duration: 0.02 };
 
   return (
