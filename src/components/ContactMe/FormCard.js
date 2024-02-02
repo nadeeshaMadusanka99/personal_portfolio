@@ -54,7 +54,20 @@ const FormCard = () => {
         theme: "light",
       });
     }
-  }, [success]);
+    if (error) {
+      toast.error("Something went wrong!", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  }, [success, error]);
+
   return (
     <>
       <motion.form
