@@ -4,7 +4,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Image from "next/image";
 
 const SkillDataProvider = ({ src, width, height, index }) => {
   const { ref, inView } = useInView({
@@ -18,7 +17,7 @@ const SkillDataProvider = ({ src, width, height, index }) => {
   };
 
   const animationDelay = 0.2;
-  const hoverTransition = { duration: 0.01 }; 
+  const hoverTransition = { duration: 0.01 };
 
   return (
     <motion.div
@@ -27,7 +26,7 @@ const SkillDataProvider = ({ src, width, height, index }) => {
       variants={imageVariants}
       animate={inView ? "visible" : "hidden"}
       custom={index}
-      transition={{ delay: index * animationDelay}}
+      transition={{ delay: index * animationDelay }}
     >
       <motion.img
         src={src}
@@ -36,7 +35,9 @@ const SkillDataProvider = ({ src, width, height, index }) => {
         whileHover="hover"
         variants={imageVariants}
         alt="skill image"
-        style={{ transition: `transform ${hoverTransition.duration}s ease-out`}}
+        style={{
+          transition: `transform ${hoverTransition.duration}s ease-out`,
+        }}
       />
     </motion.div>
   );

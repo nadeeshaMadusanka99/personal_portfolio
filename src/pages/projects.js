@@ -19,13 +19,15 @@ const project = () => {
         <Layout className="pt-16">
           <AnimatedText
             text="Innovation Transcends Expertise! "
-            className="text-7xl mb-20"
+            className="text-7xl mb-20 lg:!text-7xl sm:!text-6xl xs:!text-5xl sm:mb-14"
           />
-          <div className={`grid grid-cols-12 gap-24 gap-y-32`}>
+          <div
+            className={`grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0 xs:gap-y-12`}
+          >
             {dataProject.map((project) => (
               <div key={project.id} className={project.styles}>
                 <ProjectCard
-                type={project.type}
+                  type={project.type}
                   title={project.title}
                   summary={project.summary}
                   link={project.link}
@@ -42,4 +44,3 @@ const project = () => {
 };
 
 export default project;
-

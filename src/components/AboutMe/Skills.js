@@ -8,6 +8,7 @@ import {
   row3,
   row4,
   row5,
+  row6,
 } from "@/content/RenderSkills";
 import SkillDataProviderMobile from "./SkillDataProviderMobile";
 
@@ -16,7 +17,7 @@ const Skills = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 1120);
+      setIsSmallScreen(window.innerWidth <= 1375);
     };
 
     // Initial check on component mount
@@ -114,6 +115,22 @@ const Skills = () => {
           </div>
           <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
             {row5.map(
+              (image, index) => (
+                console.log(image.image),
+                (
+                  <SkillDataProvider
+                    key={index}
+                    src={image.image}
+                    width={70}
+                    height={70}
+                    index={index}
+                  />
+                )
+              )
+            )}
+          </div>
+          <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
+            {row6.map(
               (image, index) => (
                 console.log(image.image),
                 (
