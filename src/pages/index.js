@@ -31,15 +31,15 @@ export default function Home() {
             </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text={`Hi I'm Nadeesha, \nA Web & Mobile Developer.`}
+                text={`Hello There!!! \nI'm Nadeesha.`}
                 className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm">
-                As a fullstack developer, I am devoted to transforming
-                ideas into cutting-edge applications for both web and mobile
-                platforms. So here discover my latest projects, showcasing
-                my proficiency and comprehensive expertise in web
-                and mobile development.
+                As a fullstack developer, I am devoted to transforming ideas
+                into cutting-edge applications for both web and mobile
+                platforms. So here discover my latest projects, showcasing my
+                proficiency and comprehensive expertise in web and mobile
+                development.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
@@ -54,7 +54,6 @@ export default function Home() {
                   Resume
                   <LinkArrow className={"w-6 ml-1 lg:w-6"} />
                 </Link>
-               
               </div>
             </div>
           </div>

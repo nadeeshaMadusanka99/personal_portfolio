@@ -26,6 +26,6 @@ export const dataEducation = [
     type: "Online Coursework",
     time: "2016-2020",
     place: "Coursera And UOM Certificates",
-    info: "Completed coursework in  topics such as JavaScript for Web Development, React, React-Native, UI/UX, Python etc.",
+    info: "Completed coursework in  topics such as Machine Learning Specialization, JavaScript for Web Development, React, React-Native, UI/UX, Python etc.",
   },
 ];

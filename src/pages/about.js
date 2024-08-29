@@ -13,6 +13,7 @@ import Education from "@/components/AboutMe/Education";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/Common/TransitionEffect";
+import Experience from "@/components/AboutMe/Experience";
 
 const About = () => {
   return (
@@ -79,6 +80,7 @@ const About = () => {
             </div>
           </div>
           <Skills />
+          <Experience />
           <Education />
         </Layout>
       </main>

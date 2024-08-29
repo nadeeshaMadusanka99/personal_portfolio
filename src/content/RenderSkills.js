@@ -135,5 +135,5 @@ export const row6 = [
     image: "https://skillicons.dev/icons?i=figma",
   },
 ];
-
+export const webRender = [...row1, ...row2, ...row3, ...row4, ...row5];
 export const mobileRender = [...row1, ...row2, ...row3, ...row4, ...row5];

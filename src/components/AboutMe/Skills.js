@@ -9,6 +9,7 @@ import {
   row4,
   row5,
   row6,
+  webRender,
 } from "@/content/RenderSkills";
 import SkillDataProviderMobile from "./SkillDataProviderMobile";
 
@@ -57,7 +58,17 @@ const Skills = () => {
           ))}
         </div>
       ) : (
-        <>
+        webRender.map((image, index) => (
+          <SkillDataProvider
+            key={index}
+            src={image.image}
+            width={70}
+            height={70}
+            index={index}
+          />
+        ))
+      )}
+      {/* <>
           <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
             {row1.map((image, index) => (
               <SkillDataProvider
@@ -146,7 +157,7 @@ const Skills = () => {
             )}
           </div>
         </>
-      )}
+      ) */}
     </section>
   );
 };
