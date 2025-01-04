@@ -25,7 +25,7 @@ const Details = ({ type, time, place, info, reference }) => {
   );
 };
 
-const Education = ({ educationData }) => {
+const Education = () => {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -33,37 +33,36 @@ const Education = ({ educationData }) => {
   });
 
   return (
-    <>
-      <div className="my-10">
-        <motion.h2
-          initial={{ y: 50 }}
-          whileInView={{ y: 0 }}
-          transition={{ duration: 1.3, type: "spring" }}
-          viewport={{ once: true }}
-          className="font-bold text-7xl mb-32 mt-30 w-full text-center md:text-6xl xs:text-4xl md:mb-16"
-        >
-          Education
-        </motion.h2>
-        <div ref={ref} className="w-[75%] mx-auto relative  lg:w-[90%] md:w-full">
-          <motion.div
-            style={{ scaleY: scrollYProgress }}
-            className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light"
-          />
-          <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-8">
-            {dataEducation.map((edu, id) => (
-              <Details
-                key={id}
-                type={edu.type}
-                time={edu.time}
-                place={edu.place}
-                info={edu.info}
-                reference={ref}
-              />
-            ))}
-          </ul>
-        </div>
+    <div className="my-10">
+      <motion.h2
+        initial={{ y: 50 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 1.3, type: "spring" }}
+        viewport={{ once: true }}
+        className="font-bold text-7xl mb-32 mt-30 w-full text-center md:text-6xl xs:text-4xl md:mb-16"
+      >
+        Education
+      </motion.h2>
+      <div ref={ref} className="w-[75%] mx-auto relative  lg:w-[90%] md:w-full">
+        <motion.div
+          style={{ scaleY: scrollYProgress }}
+          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light"
+        />
+        <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-8">
+          {dataEducation.map((edu, id) => (
+            <Details
+              key={id}
+              type={edu.type}
+              time={edu.time}
+              place={edu.place}
+              info={edu.info}
+              reference={ref}
+            />
+          ))}
+        </ul>
       </div>
-    </>
+    </div>
+
   );
 };
 
