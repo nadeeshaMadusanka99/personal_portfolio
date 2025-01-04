@@ -20,15 +20,6 @@ export default function Home() {
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light sm:min-h-0 sm:pt-8">
         <Layout className="pt-0  md:pt-16 sm:pt-0">
           <div className="flex items-center justify-between w-full lg:flex-col">
-            <div className="w-1/2 md:w-full">
-              <Image
-                src={ProfilePic}
-                alt="NadeeshaMadusanka"
-                className="w-full h-auto lg:hidden md:inline-block md:w-full"
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-              />
-            </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
                 text={`Hello There!!! \nI'm Nadeesha.`}
@@ -55,6 +46,15 @@ export default function Home() {
                   <LinkArrow className={"w-6 ml-1 lg:w-6"} />
                 </Link>
               </div>
+            </div>
+            <div className="w-3/4 md:w-full ">
+              <Image
+                src={ProfilePic}
+                alt="NadeeshaMadusanka"
+                className="w-full h-auto lg:hidden md:inline-block md:w-full"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+              />
             </div>
           </div>
         </Layout>
