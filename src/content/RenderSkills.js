@@ -1,4 +1,4 @@
-import { framer, headless, reactNative } from "@/imports";
+import { framer, headless, reactNative, webix } from "@/imports";
 
 export const row1 = [
   {
@@ -28,6 +28,10 @@ export const row1 = [
   {
     name: "Next Js",
     image: "https://skillicons.dev/icons?i=nextjs",
+  },
+  {
+    name: "Webix",
+    image: webix.src,
   },
   {
     name: "SASS",
@@ -76,6 +80,10 @@ export const row2 = [
     name: "MongoDB",
     image: "https://skillicons.dev/icons?i=mongodb",
   },
+  {
+    name: "Docker",
+    image: "https://skillicons.dev/icons?i=docker",
+  }
 ];
 export const row3 = [
   {
@@ -112,6 +120,10 @@ export const row4 = [
   {
     name: "Headless UI",
     image: headless.src,
+  },
+  {
+    name: "Jest",
+    image: "https://skillicons.dev/icons?i=jest",
   },
   {
     name: "Selenium",
