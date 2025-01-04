@@ -14,7 +14,6 @@ export const dataProject = [
     title: "Final Year Project (Ongoing)",
     summary:
       "Focused on enhancing model explainability for predicting valence from fMRI data, with the implementation of Graph Neural Networks (GNN) for improved model performance and interpretation.",
-    link: "/",
     github: "",
     type: "University Project",
     img: project1,

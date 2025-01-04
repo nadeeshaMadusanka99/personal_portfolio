@@ -26,7 +26,7 @@ export default function Home() {
                 className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm">
-                As a fullstack developer, I am devoted to transforming ideas
+                As a Software Engineer, I am devoted to transforming ideas
                 into cutting-edge applications for both web and mobile
                 platforms. So here discover my latest projects, showcasing my
                 proficiency and comprehensive expertise in web and mobile
