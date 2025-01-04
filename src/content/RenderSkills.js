@@ -37,6 +37,10 @@ export const row1 = [
     name: "Tailwind-CSS",
     image: "https://skillicons.dev/icons?i=tailwind",
   },
+  {
+    name: "Material UI",
+    image: "https://skillicons.dev/icons?i=materialui",
+  },
 ];
 export const row2 = [
   {
@@ -48,10 +52,9 @@ export const row2 = [
     image: "https://skillicons.dev/icons?i=express",
   },
   {
-    name: "Material UI",
-    image: "https://skillicons.dev/icons?i=materialui",
+    name: "Django",
+    image: "https://skillicons.dev/icons?i=django",
   },
-
   {
     name: "Python",
     image: "https://skillicons.dev/icons?i=py",
@@ -75,10 +78,6 @@ export const row2 = [
   },
 ];
 export const row3 = [
-  {
-    name: "Firebase",
-    image: "https://skillicons.dev/icons?i=firebase",
-  },
   {
     name: "Git",
     image: "https://skillicons.dev/icons?i=git",
@@ -135,5 +134,7 @@ export const row6 = [
     image: "https://skillicons.dev/icons?i=figma",
   },
 ];
-export const webRender = [...row1, ...row2, ...row3, ...row4, ...row5];
+
+
+export const IconsRender = [...row1, ...row2, ...row3, ...row4, ...row5, ...row6];
 export const mobileRender = [...row1, ...row2, ...row3, ...row4, ...row5];

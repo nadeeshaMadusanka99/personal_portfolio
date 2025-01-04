@@ -2,32 +2,19 @@ import React, { useEffect, useState } from "react";
 import SkillDataProvider from "./SkillDataProvider";
 import { motion } from "framer-motion";
 import {
-  mobileRender,
-  row1,
-  row2,
-  row3,
-  row4,
-  row5,
-  row6,
-  webRender,
+  IconsRender,
 } from "@/content/RenderSkills";
-import SkillDataProviderMobile from "./SkillDataProviderMobile";
 
 const Skills = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
-
   useEffect(() => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth <= 1375);
     };
-
-    // Initial check on component mount
     handleResize();
 
-    // Event listener for window resize
     window.addEventListener("resize", handleResize);
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -47,18 +34,8 @@ const Skills = () => {
       >
         Tech Stack
       </motion.h2>
-      {isSmallScreen ? (
-        <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
-          {mobileRender.map((image, index) => (
-            <SkillDataProviderMobile
-              key={index}
-              src={image.image}
-              index={index}
-            />
-          ))}
-        </div>
-      ) : (
-        webRender.map((image, index) => (
+      <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
+        {IconsRender.map((image, index) => (
           <SkillDataProvider
             key={index}
             src={image.image}
@@ -66,98 +43,8 @@ const Skills = () => {
             height={70}
             index={index}
           />
-        ))
-      )}
-      {/* <>
-          <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
-            {row1.map((image, index) => (
-              <SkillDataProvider
-                key={index}
-                src={image.image}
-                width={70}
-                height={70}
-                index={index}
-              />
-            ))}
-          </div>
-
-          <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
-            {row2.map((image, index) => (
-              <SkillDataProvider
-                key={index}
-                src={image.image}
-                width={70}
-                height={70}
-                index={index}
-              />
-            ))}
-          </div>
-          <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
-            {row3.map(
-              (image, index) => (
-                console.log(image.image),
-                (
-                  <SkillDataProvider
-                    key={index}
-                    src={image.image}
-                    width={70}
-                    height={70}
-                    index={index}
-                  />
-                )
-              )
-            )}
-          </div>
-          <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
-            {row4.map(
-              (image, index) => (
-                console.log(image.image),
-                (
-                  <SkillDataProvider
-                    key={index}
-                    src={image.image}
-                    width={70}
-                    height={70}
-                    index={index}
-                  />
-                )
-              )
-            )}
-          </div>
-          <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
-            {row5.map(
-              (image, index) => (
-                console.log(image.image),
-                (
-                  <SkillDataProvider
-                    key={index}
-                    src={image.image}
-                    width={70}
-                    height={70}
-                    index={index}
-                  />
-                )
-              )
-            )}
-          </div>
-          <div className="flex flex-row justify-around flex-wrap mt-9 gap-12 items-center">
-            {row6.map(
-              (image, index) => (
-                console.log(image.image),
-                (
-                  <SkillDataProvider
-                    key={index}
-                    src={image.image}
-                    width={70}
-                    height={70}
-                    index={index}
-                  />
-                )
-              )
-            )}
-          </div>
-        </>
-      ) */}
+        ))}
+      </div>
     </section>
   );
 };
