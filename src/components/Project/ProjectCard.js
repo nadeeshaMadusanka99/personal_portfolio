@@ -1,24 +1,20 @@
 const { default: Link } = require("next/link");
-const { GithubIcon } = require("../Common/Icons");
+const { WebIcon } = require("../Common/Icons");
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const FramerImage = motion(Image);
-export const ProjectCard = ({ type, img, title, summary, link, github }) => {
+export const ProjectCard = ({ type, img, title, summary, link = null, github }) => {
   return (
     <motion.article
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeInOut" }}
       viewport={{ once: true }}
-      className="w-full flex items-center justify-between  rounded-3xl relative
-      ring-2 ring-zinc-300 border-2 border-solid border-zinc-500 shadow-lg shadow-zinc-200  p-12 rounded-br-2xl dark:shadow-md dark:border-zinc-500 dark:bg-card dark:text-light dark:ring-zinc-300 dark:shadow-zinc-200 lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4"
+      className="w-full flex items-center justify-between rounded-3xl relative
+      ring-2 ring-zinc-300 border-2 border-solid border-zinc-500 shadow-lg shadow-zinc-200  p-12  dark:shadow-md dark:border-zinc-500 dark:bg-card dark:text-light dark:ring-zinc-300 dark:shadow-zinc-200 lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4"
     >
-      {/* <div
-        className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark
-        rounded-br-3xl
-        "
-      /> */}
+
       <Link
         href={link}
         target="_blank"
@@ -53,7 +49,7 @@ export const ProjectCard = ({ type, img, title, summary, link, github }) => {
 
         <div className="mt-2 flex items-center ">
           <Link href={github} target="_blank" className="w-10 ">
-            <GithubIcon className="" />
+            <WebIcon className="" />
           </Link>
           <Link
             href={github}

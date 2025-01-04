@@ -1,13 +1,13 @@
 import Layout from "@/components/Common/Layout";
 import Head from "next/head";
 import Image from "next/image";
-// import Link from 'next/link'
 import ProfilePic from "../../public/images/profile/developer-pic-1.png";
 import AnimatedText from "@/components/Common/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Common/Icons";
 import ContactMeIcon from "@/components/Home/ContactMeIcon";
 import TransitionEffect from "@/components/Common/TransitionEffect";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -48,13 +48,24 @@ export default function Home() {
               </div>
             </div>
             <div className="w-3/4 md:w-full ">
-              <Image
-                src={ProfilePic}
-                alt="NadeeshaMadusanka"
-                className="w-full h-auto lg:hidden md:inline-block md:w-full"
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-              />
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: { opacity: 0.1, scale: 0.8 },
+                  visible: { opacity: 1, scale: 1 },
+                }}
+                transition={{ duration: 1.5 }}
+              >
+
+                <Image
+                  src={ProfilePic}
+                  alt="NadeeshaMadusanka"
+                  className="w-full h-auto lg:hidden md:inline-block md:w-full"
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                />
+              </motion.div>
             </div>
           </div>
         </Layout>

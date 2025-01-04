@@ -11,6 +11,61 @@ import {
 export const dataProject = [
   {
     id: uuid(),
+    title: "Final Year Project (Ongoing)",
+    summary:
+      "Focused on enhancing model explainability for predicting valence from fMRI data, with the implementation of Graph Neural Networks (GNN) for improved model performance and interpretation.",
+    link: "/",
+    github: "",
+    type: "University Project",
+    img: project1,
+    styles: "col-span-12",
+  },
+  {
+    id: uuid(),
+    title: "Gym Membership Management System",
+    summary:
+      "Membership Management System for gyms. It lets admins manage operations while customers can track attendance, purchase, and pay for memberships. The system also features fingerprint-based check-ins for a smooth and secure experience.",
+    link: "/",
+    github: "",
+    type: "Company Project",
+    img: project1,
+    styles: "col-span-12",
+  },
+  {
+    id: uuid(),
+    title: "Shopify Store and App",
+    summary:
+      "Building a Store, offering both new and second-hand clothes. Users can buy new items or sell their used clothes, which are reviewed by admins before being listed for resale.",
+    link: "/",
+    github: "",
+    type: "Company Project",
+    img: project1,
+    styles: "col-span-12",
+  },
+  {
+    id: uuid(),
+    title: "Fitsmiles - Mobile App / Fitbit Watch App",
+    summary:
+      "Innovative app, Motivating physical activity by rewarding users with coins for walking in designated areas. These coins can be redeemed for purchases within partner malls.",
+    link: "https://fitsmiles.com/",
+    github: "",
+    type: "Internship Project",
+    img: project1,
+    styles: "col-span-12",
+  },
+  {
+    id: uuid(),
+    title: "Train Booking System",
+    summary:
+      "An online platform for purchasing train tickets and checking schedules effortlessly.",
+    link: "http://travelgo.ecodeit.com:13000/",
+    github: "https://github.com/nadeeshaMadusanka99/TravelGo-Frontend",
+    type: "University Semester 5 Group Project",
+    img: project1,
+    styles: "col-span-12",
+  },
+  {
+    id: uuid(),
     title: "CarHub Web Application",
     summary:
       "CarHub Car Showcase is a sleek web app for exploring a wide range of car models. Discover detailed info, high-quality images, and key features of your favorite cars in one place.",
@@ -30,18 +85,6 @@ export const dataProject = [
     type: "Website",
     img: project2,
     styles: "col-span-12 ",
-  },
-  {
-    id: uuid(),
-    title: "TravelGo Website",
-    summary:
-      "A streamlined train booking system offering seat selection, fair pricing, and a seamless booking experience for your rail journeys. Used Stack is PERN(PostgreSQL, ExpressJS, React, Node.js) ",
-    link: "http://travelgo.ecodeit.com:13000/",
-    github: "https://github.com/nadeeshaMadusanka99/TravelGo-Frontend",
-    type: "Featured Project",
-    img: project1,
-    styles: "col-span-12",
-
   },
   {
     id: uuid(),
