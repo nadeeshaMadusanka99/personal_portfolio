@@ -53,13 +53,15 @@ export const ProjectCard = ({ type, img, title, summary, link = null, github }) 
         </p>
 
         <div className="mt-2 flex items-center gap-2">
-          <Link
-            href={github}
-            target="_blank"
-            className="rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light dark:hover:border-light dark:hover:border sm:px-4 sm:text-base"
-          >
-            Visit Project
-          </Link>
+          {github && (
+            <Link
+              href={github}
+              target="_blank"
+              className="rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light dark:hover:border-light dark:hover:border sm:px-4 sm:text-base"
+            >
+              Visit Project
+            </Link>
+          )}
           {link && (
             <Link href={link} target="_blank" className="w-10 ">
               <WebIcon className="" />
