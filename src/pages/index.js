@@ -56,16 +56,20 @@ export default function Home() {
                   visible: { opacity: 1, scale: 1 },
                 }}
                 transition={{ duration: 1.5 }}
-              >
 
+              >
                 <Image
                   src={ProfilePic}
                   alt="NadeeshaMadusanka"
-                  className="w-full h-auto lg:hidden md:inline-block md:w-full"
                   priority
+                  className="w-full h-auto lg:hidden md:inline-block md:w-full"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                  style={{
+                    filter: "drop-shadow(0 0px 4px rgba(255, 255, 255, 0.8))",
+                  }}
                 />
               </motion.div>
+
             </div>
           </div>
         </Layout>
