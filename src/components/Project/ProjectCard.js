@@ -64,7 +64,8 @@ export const ProjectCard = ({ type, img, title, summary, link = null, github }) 
           )}
           {link && (
             <Link href={link} target="_blank" className="w-10 ">
-              <WebIcon className="" />
+
+              <WebIcon className="fill-dark dark:fill-light" />
             </Link>
           )}
         </div>
