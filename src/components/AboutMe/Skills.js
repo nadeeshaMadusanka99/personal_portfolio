@@ -44,10 +44,10 @@ const Skills = () => {
         ( Languages / Frameworks / Libraries / Tools )
       </motion.h2>
       {/* TODO: Add all the icons to the project removing links*/}
-      <div className="flex flex-row justify-around flex-wrap  gap-12 items-center w-full mb-12 px-2">
+      <div className="flex flex-row justify-around flex-wrap  gap-12 items-center px-2 w-[80%]">
         {IconsRender.map((image, index) => (
           <SkillDataProvider
-            key={index}
+            key={image.id}
             src={image.image}
             width={70}
             height={70}
