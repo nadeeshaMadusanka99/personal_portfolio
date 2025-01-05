@@ -5,7 +5,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const SkillDataProvider = ({ src, width, height, index }) => {
+const SkillDataProvider = ({ src, width, height, index, name }) => {
+
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -15,9 +16,7 @@ const SkillDataProvider = ({ src, width, height, index }) => {
     visible: { opacity: 1 },
     hover: { scale: 1.25 },
   };
-
-  const animationDelay = 0.2;
-  const hoverTransition = { duration: 0.01 };
+  const animationDelay = 0.1;
 
   return (
     <motion.div
@@ -27,6 +26,7 @@ const SkillDataProvider = ({ src, width, height, index }) => {
       animate={inView ? "visible" : "hidden"}
       custom={index}
       transition={{ delay: index * animationDelay }}
+      className="relative flex flex-col items-center group"
     >
       <motion.img
         src={src}
@@ -35,10 +35,13 @@ const SkillDataProvider = ({ src, width, height, index }) => {
         whileHover="hover"
         variants={imageVariants}
         alt="skill image"
-        style={{
-          transition: `transform ${hoverTransition.duration}s ease-out`,
-        }}
+        className="mb-2"
       />
+      <span
+        className="absolute bottom-0 translate-y-full bg-gray-800 text-white text-sm text-center py-1 px-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 dark:bg-white dark:text-black"
+      >
+        {name}
+      </span>
     </motion.div>
   );
 };

@@ -8,7 +8,6 @@ import useThemeSwitcher from "../Hooks/useThemeSwitcher";
 const FormCard = () => {
   const formRef = useRef();
   const [mode] = useThemeSwitcher();
-  console.log(mode);
 
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
