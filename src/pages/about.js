@@ -13,6 +13,7 @@ import Education from "@/components/AboutMe/Education";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/Common/TransitionEffect";
+import Experience from "@/components/AboutMe/Experience";
 
 const About = () => {
   return (
@@ -53,10 +54,10 @@ const About = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-span-" />
+            <div className="col-span-0" />
             <div
               className="col-span-5 relative rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light xl:col-span-6
-            md:order-1 md:col-span-12 sm:p-5"
+            md:order-1 md:col-span-8 sm:col-span-10 sm:p-5 "
             >
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
               <motion.div
@@ -71,7 +72,7 @@ const About = () => {
                 <Image
                   src={profilePic}
                   alt="NadeeshaMadusanka"
-                  className="w-[25rem] h-[31rem] rounded-2xl sm:h-[22rem]"
+                  className="w-[25.5rem] h-[31rem] rounded-2xl md:h-[30rem] sm:h-[22rem] "
                   priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw "
                 />
@@ -79,6 +80,7 @@ const About = () => {
             </div>
           </div>
           <Skills />
+          <Experience />
           <Education />
         </Layout>
       </main>

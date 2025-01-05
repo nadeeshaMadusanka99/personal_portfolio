@@ -19,6 +19,7 @@
     "react-dom": "18.2.0",
     "react-intersection-observer": "^9.5.3",
     "react-toastify": "^10.0.4",
+    "sharp": "^0.33.4",
     "uuid": "^9.0.1"
   },
   "devDependencies": {

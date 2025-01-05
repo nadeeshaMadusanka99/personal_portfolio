@@ -1,5 +1,4 @@
-import { framer, headless, reactNative } from "@/imports";
-
+import { framer, headless, reactNative, webix } from "@/imports";
 
 export const row1 = [
   {
@@ -31,6 +30,10 @@ export const row1 = [
     image: "https://skillicons.dev/icons?i=nextjs",
   },
   {
+    name: "Webix",
+    image: webix.src,
+  },
+  {
     name: "SASS",
     image: "https://skillicons.dev/icons?i=sass",
   },
@@ -38,28 +41,29 @@ export const row1 = [
     name: "Tailwind-CSS",
     image: "https://skillicons.dev/icons?i=tailwind",
   },
-  
+  {
+    name: "Material UI",
+    image: "https://skillicons.dev/icons?i=materialui",
+  },
+];
+export const row2 = [
   {
     name: "Node Js",
     image: "https://skillicons.dev/icons?i=nodejs",
   },
-];
-export const row2 = [
   {
     name: "Express Js",
     image: "https://skillicons.dev/icons?i=express",
   },
   {
-    name: "Material UI",
-    image: "https://skillicons.dev/icons?i=materialui",
+    name: "Django",
+    image: "https://skillicons.dev/icons?i=django",
   },
-
-  
   {
     name: "Python",
     image: "https://skillicons.dev/icons?i=py",
   },
-  
+
   {
     name: "Java",
     image: "https://skillicons.dev/icons?i=java",
@@ -77,9 +81,9 @@ export const row2 = [
     image: "https://skillicons.dev/icons?i=mongodb",
   },
   {
-    name: "Firebase",
-    image: "https://skillicons.dev/icons?i=firebase",
-  },
+    name: "Docker",
+    image: "https://skillicons.dev/icons?i=docker",
+  }
 ];
 export const row3 = [
   {
@@ -98,17 +102,17 @@ export const row3 = [
     name: "Netlify",
     image: "https://skillicons.dev/icons?i=netlify",
   },
-  
+
   {
     name: "Postman",
     image: "https://skillicons.dev/icons?i=postman",
   },
+];
+export const row4 = [
   {
     name: "Redux",
     image: "https://skillicons.dev/icons?i=redux",
   },
-];
-export const row4 = [
   {
     name: "Framer Motion",
     image: framer.src,
@@ -118,24 +122,31 @@ export const row4 = [
     image: headless.src,
   },
   {
+    name: "Jest",
+    image: "https://skillicons.dev/icons?i=jest",
+  },
+  {
     name: "Selenium",
     image: "https://skillicons.dev/icons?i=selenium	",
+  },
+];
+export const row5 = [
+  {
+    name: "Adobe Illustrator",
+    image: "https://skillicons.dev/icons?i=ai",
   },
   {
     name: "Adobe Photoshop",
     image: "https://skillicons.dev/icons?i=ps",
   },
-  
 ];
-export const row5 = [
+export const row6 = [
   {
     name: "Figma",
     image: "https://skillicons.dev/icons?i=figma",
   },
-  {
-    name: "Adobe Illustrator",
-    image: "https://skillicons.dev/icons?i=ai",
-  },
 ];
 
-export const mobileRender =[...row1,...row2,...row3,...row4,...row5]
+
+export const IconsRender = [...row1, ...row2, ...row3, ...row4, ...row5, ...row6];
+export const mobileRender = [...row1, ...row2, ...row3, ...row4, ...row5];

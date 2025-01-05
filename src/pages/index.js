@@ -1,13 +1,13 @@
 import Layout from "@/components/Common/Layout";
 import Head from "next/head";
 import Image from "next/image";
-// import Link from 'next/link'
 import ProfilePic from "../../public/images/profile/developer-pic-1.png";
 import AnimatedText from "@/components/Common/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Common/Icons";
 import ContactMeIcon from "@/components/Home/ContactMeIcon";
 import TransitionEffect from "@/components/Common/TransitionEffect";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -20,26 +20,17 @@ export default function Home() {
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light sm:min-h-0 sm:pt-8">
         <Layout className="pt-0  md:pt-16 sm:pt-0">
           <div className="flex items-center justify-between w-full lg:flex-col">
-            <div className="w-1/2 md:w-full">
-              <Image
-                src={ProfilePic}
-                alt="NadeeshaMadusanka"
-                className="w-full h-auto lg:hidden md:inline-block md:w-full"
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-              />
-            </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text={`Hi I'm Nadeesha, \nA Web & Mobile Developer.`}
+                text={`Hello There!!! \nI'm Nadeesha.`}
                 className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm">
-                As a skilled fullstack developer, I am devoted to transforming
-                ideas into cutting-edge applications for both web and mobile
-                platforms. So here discover my latest projects, showcasing
-                my proficiency and comprehensive expertise in web
-                and mobile development.
+                As a Software Engineer, I am devoted to transforming ideas
+                into cutting-edge applications for both web and mobile
+                platforms. So here discover my latest projects, showcasing my
+                proficiency and comprehensive expertise in web and mobile
+                development.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
@@ -54,8 +45,31 @@ export default function Home() {
                   Resume
                   <LinkArrow className={"w-6 ml-1 lg:w-6"} />
                 </Link>
-               
               </div>
+            </div>
+            <div className="w-3/4 md:w-full ">
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: { opacity: 0.1, scale: 0.8 },
+                  visible: { opacity: 1, scale: 1 },
+                }}
+                transition={{ duration: 1.5 }}
+
+              >
+                <Image
+                  src={ProfilePic}
+                  alt="NadeeshaMadusanka"
+                  priority
+                  className="w-full h-auto lg:hidden md:inline-block md:w-full"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                  style={{
+                    filter: "drop-shadow(0 0px 4px rgba(255, 255, 255, 0.8))",
+                  }}
+                />
+              </motion.div>
+
             </div>
           </div>
         </Layout>

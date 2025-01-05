@@ -17,3 +17,4 @@ export { default as profilePicHome } from "@/assets/images/profile/developer-pic
 export { default as framer } from "@/assets/images/skills/framer.png";
 export { default as headless } from "@/assets/images/skills/headlessUI.png";
 export { default as reactNative } from "@/assets/images/skills/react-native.png";
+export { default as webix } from "@/assets/images/skills/webix.png";
