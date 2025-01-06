@@ -44,14 +44,14 @@ const contact_me = () => {
         <Layout className="pt-8">
           <motion.div
             ref={ref}
-            className={`flex gap-40`}
+            className={`flex gap-40 md:flex-col md:gap-8 `}
             variants={variants}
             initial="initial"
             whileInView="animate"
           >
             <motion.div>
               <motion.h1
-                className="text-7xl font-extrabold leading-normal text-right text-black dark:text-light"
+                className="text-7xl font-extrabold leading-normal text-right text-black dark:text-light md:font-bold md:text-6xl md:leading-normal md:text-left"
                 variants={variants}
               >
                 Let’s <br />
@@ -60,15 +60,15 @@ const contact_me = () => {
               </motion.h1>
               <div className="flex flex-row mt-4">
                 <p
-                  className="text-3xl mr-4 font-semibold text-black/60 dark:text-light/60"
+                  className="text-3xl mr-4 font-semibold text-black/60 dark:text-light/60 md:text-2xl"
 
                 >
                   Connect with me
                 </p>
-                <RightArrowIcon className="fill-dark opacity-60  dark:fill-light" />
+                <RightArrowIcon className="fill-dark opacity-60  dark:fill-light md:size-8 md:pt-2" />
               </div>
             </motion.div>
-            <div className={`flex-1 relative flex flex-col items-center`}>
+            <div className={`flex-1 relative flex flex-col items-center `}>
               <AnimatedSvg isInView={isInView} />
               <div className="w-full">
                 <FormCard />
