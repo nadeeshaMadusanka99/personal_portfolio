@@ -8,7 +8,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[70%] mx-auto flex flex-col md:w-[80%]"
+      className="my-8 first:mt-0 last:mb-0 w-[70%] mx-auto flex flex-col"
     >
       <LiIcon reference={ref} />
       <motion.div
@@ -52,7 +52,7 @@ const Experience = () => {
           style={{ scaleY: scrollYProgress }}
           className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light"
         />
-        <ul className="w-full flex flex-col items-start justify-between ml-4">
+        <ul className="w-full flex flex-col items-start justify-between ml-4 md:ml-6 xs:ml-8">
           {dataExperience.map((edu) => (
             <Details
               key={edu.id}

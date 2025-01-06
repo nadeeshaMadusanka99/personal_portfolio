@@ -33,13 +33,13 @@ const About = () => {
             className="text-7xl mb-20 lg:!text-7xl sm:!text-6xl xs:!text-5xl sm:mb-8"
           />
 
-          <div className="grid w-full grid-cols-12 gap-16 sm:grid-cols-12 sm:gap-6 ">
-            <div className="col-span-7 flex flex-col items-start justify-start mt-10  xl:col-span-4 md:order-2 md:col-span-12 ">
+          <div className="grid w-full grid-cols-12 gap-16 md:flex md:flex-col-reverse md:items-center sm:grid-cols-12 sm:gap-6 ">
+            <div className="col-span-7 flex flex-col items-start justify-start mt-10  xl:col-span-4  md:col-span-12 md:items-center">
               <h2 className="mb-4 text-xl font-bold uppercase text-dark/75 dark:text-light/75 md:text-xl sm:mb-2 ">
                 BIOGRAPHY
               </h2>
               {DataContent.map((data, id) => (
-                <p key={id} className=" my-2 text-lg md:text-base">
+                <p key={data.id} className=" my-2 text-lg md:text-base">
                   {data.type}
                 </p>
               ))}
@@ -56,7 +56,7 @@ const About = () => {
             </div>
             <div
               className=" col-span-5 relative rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light xl:col-span-6
-            md:order-1 md:col-span-8 sm:col-span-10 sm:p-5 "
+            md:col-span-8 sm:col-span-10 sm:p-5 "
             >
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
               <motion.div

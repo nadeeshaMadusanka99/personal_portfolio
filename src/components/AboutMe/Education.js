@@ -43,12 +43,12 @@ const Education = () => {
       >
         Education
       </motion.h2>
-      <div ref={ref} className="w-[75%] mx-auto relative  lg:w-[90%] md:w-full">
+      <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
         <motion.div
           style={{ scaleY: scrollYProgress }}
           className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light"
         />
-        <ul className="w-full flex flex-col items-start ml-4 xs:ml-8">
+        <ul className="w-full flex flex-col items-start ml-4 md:ml-6 xs:ml-8">
           {dataEducation.map((edu, id) => (
             <Details
               key={edu.id}
