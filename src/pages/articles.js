@@ -63,7 +63,7 @@ const articles = () => {
                         text="Words Can Change The World!"
                         className="text-7xl mb-20 lg:!text-7xl sm:!text-6xl xs:!text-5xl sm:mb-8"
                     />
-                    <ul className='grid grid-cols-2 gap-16'>
+                    <ul className='grid grid-cols-2 gap-16 lg:gap-8 md:gap-4 sm:gap-2 xs:gap-0 sm:grid-cols-1'>
                         {
                             dataArticle.map((article) => (
                                 <ArticleCard
