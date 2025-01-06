@@ -44,6 +44,7 @@ const FormCard = () => {
           setSuccess(true);
         },
         (error) => {
+          console.log(error);
           setError(true);
         }
       );

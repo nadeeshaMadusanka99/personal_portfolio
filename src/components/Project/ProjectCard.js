@@ -57,7 +57,7 @@ export const ProjectCard = ({ type, img, title, summary, link = null, github }) 
             <Link
               href={github}
               target="_blank"
-              className="rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light dark:hover:border-light dark:hover:border sm:px-4 sm:text-base"
+              className="rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold  hover:bg-light hover:text-dark hover:border-2 hover:border-dark dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light dark:hover:border-light dark:hover:border-2 sm:px-4 sm:text-base"
             >
               Visit Project
             </Link>
