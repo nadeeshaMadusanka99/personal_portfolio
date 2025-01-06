@@ -22,7 +22,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center gap-4 h-full w-full overflow-hidden pt-20 md:py-10 sm:py-5"
+      className="flex flex-col items-center justify-center gap-4 h-full w-full overflow-hidden pt-20 md:py-10 sm:py-0"
       style={{ transform: "scale(0.9)" }}
     >
       <motion.h2
@@ -44,7 +44,7 @@ const Skills = () => {
         ( Languages / Frameworks / Libraries / Tools )
       </motion.h2>
       {/* TODO: Add all the icons to the project removing links*/}
-      <div className="flex flex-row justify-around flex-wrap  gap-12 items-center px-2 w-[80%]">
+      <div className="flex flex-row justify-around flex-wrap mb-12 gap-12 items-center px-2 w-[80%] md:w-[90%] sm:w-full">
         {IconsRender.map((image, index) => (
           <SkillDataProvider
             key={image.id}

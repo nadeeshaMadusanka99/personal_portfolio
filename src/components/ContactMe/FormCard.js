@@ -12,13 +12,6 @@ const FormCard = () => {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  // useEffect(() => {
-  //   return () => {
-  //     // Clear toasts on component unmount
-  //     toast.dismiss();
-  //   };
-  // }, []);
-
   const sendEmail = (e) => {
     e.preventDefault();
     toast.info("Message Sending...", {
@@ -86,14 +79,14 @@ const FormCard = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 4, duration: 1 }}
-        className="flex flex-col gap-10 z-10"
+        className="flex flex-col gap-10 z-10 md:w-[80%]"
       >
         <input
           type="text"
           required
           placeholder="Name"
           name="name"
-          className=" z-20 p-4 rounded-xl border border-zinc-400 dark:bg-black dark:text-white"
+          className="z-20 p-4 rounded-xl border border-zinc-400 dark:bg-black dark:text-white"
         />
         <input
           type="email"
