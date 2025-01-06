@@ -30,7 +30,7 @@ const Skills = () => {
         whileInView={{ y: 0 }}
         transition={{ duration: 1.3, type: "spring" }}
         viewport={{ once: true }}
-        className="font-bold text-7xl text-secondary mb-0 w-full text-center md:text-6xl sm:mb-10 sm:text-5xl"
+        className="font-bold text-7xl text-secondary mb-0 w-full text-center md:text-6xl sm:text-5xl"
       >
         Tech Stack
       </motion.h2>
@@ -39,12 +39,11 @@ const Skills = () => {
         whileInView={{ y: 0 }}
         transition={{ duration: 1.3, type: "spring" }}
         viewport={{ once: true }}
-        className=" text-4xl text-secondary mb-16 w-full text-center md:text-sm sm:mb-10 sm:text-5xl"
+        className="text-secondary mb-16 w-full text-center sm:text-2xl sm:mt-0 md:text-3xl text-4xl sm:mb-10"
       >
         ( Languages / Frameworks / Libraries / Tools )
       </motion.h2>
-      {/* TODO: Add all the icons to the project removing links*/}
-      <div className="flex flex-row justify-around flex-wrap mb-12 gap-12 items-center px-2 w-[80%] md:w-[90%] sm:w-full">
+      <div className="flex flex-row justify-around flex-wrap mb-12 gap-12 items-center px-2 w-[80%] md:w-full sm:w-full">
         {IconsRender.map((image, index) => (
           <SkillDataProvider
             key={image.id}

@@ -16,7 +16,7 @@ const SkillDataProvider = ({ src, width, height, index, name }) => {
     visible: { opacity: 1 },
     hover: { scale: 1.25 },
   };
-  const animationDelay = 0.1;
+  const animationDelay = 0.05;
 
   return (
     <motion.div
