@@ -34,7 +34,7 @@ const About = () => {
           />
 
           <div className="grid w-full grid-cols-12 gap-16 sm:grid-cols-12 sm:gap-6 ">
-            <div className="col-span-6 flex flex-col items-start justify-start mt-10  xl:col-span-4 md:order-2 md:col-span-12 ">
+            <div className="col-span-7 flex flex-col items-start justify-start mt-10  xl:col-span-4 md:order-2 md:col-span-12 ">
               <h2 className="mb-4 text-xl font-bold uppercase text-dark/75 dark:text-light/75 md:text-xl sm:mb-2 ">
                 BIOGRAPHY
               </h2>
@@ -54,9 +54,8 @@ const About = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-span-0" />
             <div
-              className="col-span-5 relative rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light xl:col-span-6
+              className=" col-span-5 relative rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light xl:col-span-6
             md:order-1 md:col-span-8 sm:col-span-10 sm:p-5 "
             >
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
@@ -72,7 +71,7 @@ const About = () => {
                 <Image
                   src={profilePic}
                   alt="NadeeshaMadusanka"
-                  className="w-[25.5rem] h-[31rem] rounded-2xl md:h-[30rem] sm:h-[22rem] "
+                  className="w-[25.5rem] h-[31rem] rounded-xl md:h-[30rem] sm:h-[22rem] "
                   priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw "
                 />

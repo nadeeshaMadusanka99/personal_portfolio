@@ -75,7 +75,7 @@ export const dataProject = [
     link: "https://tindogweb44.netlify.app/",
     github: "https://github.com/nadeeshaMadusanka99/TinDog-App",
     type: "WebsiWeb Application",
-    img: project2,
+    img: project1,
     styles: "col-span-12 ",
   },
   {
@@ -86,7 +86,7 @@ export const dataProject = [
     link: "https://movie-master-44.netlify.app/",
     github: "https://github.com/nadeeshaMadusanka99/movie-master-react",
     type: "Web Application",
-    img: project3,
+    img: project1,
     styles: "col-span-12 ",
   },
   {
@@ -97,7 +97,7 @@ export const dataProject = [
     link: "https://summarize-articles-ai.netlify.app/",
     github: "https://github.com/nadeeshaMadusanka99/summarize-articles-openAI",
     type: "Web Application",
-    img: project4,
+    img: project1,
     styles: "col-span-12",
   },
   {
@@ -107,7 +107,7 @@ export const dataProject = [
       "A full-stack MERN (MongoDB, Express, React, Node.js) application for managing your virtual bookshelf. Add, update, delete, and explore book details with ease.",
     github: "https://github.com/nadeeshaMadusanka99/MERN-bookstore-app",
     type: "CRUD Application",
-    img: project5,
+    img: project1,
     styles: "col-span-12 ",
 
   },
@@ -118,7 +118,7 @@ export const dataProject = [
       "Java-based command-line application for managing recipients, sending emails, and automating birthday wishes. Easily add new recipients, compose emails, and track sent messages.",
     github: "https://github.com/nadeeshaMadusanka99/email-client",
     type: "CLI Application",
-    img: project6,
+    img: project1,
     styles: "col-span-12",
   },
 ];
