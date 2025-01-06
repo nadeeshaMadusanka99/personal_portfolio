@@ -15,7 +15,7 @@ export const ArticleCard = ({ title, summary, time, link, img }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeInOut" }}
             viewport={{ once: true }}
-            className="relative sm:mb-4"
+            className="relative sm:mb-10"
         >
             <div className="relative  col-span-1 w-full p-4 rounded-2xl ring-2 ring-zinc-300 border-2 border-solid border-zinc-500 shadow-lg shadow-zinc-200  dark:shadow-md dark:border-zinc-500 dark:bg-card dark:text-light dark:ring-zinc-300 dark:shadow-zinc-200">
                 <div
