@@ -61,16 +61,18 @@ const contact_me = () => {
               <div className="flex flex-row mt-4">
                 <p
                   className="text-3xl mr-4 font-semibold text-black/60 dark:text-light/60"
-                  variants={variants}
+
                 >
                   Connect with me
                 </p>
                 <RightArrowIcon className="fill-dark opacity-60  dark:fill-light" />
               </div>
             </motion.div>
-            <div className={`flex-1 relative`}>
+            <div className={`flex-1 relative flex flex-col items-center`}>
               <AnimatedSvg isInView={isInView} />
-              <FormCard />
+              <div className="w-full">
+                <FormCard />
+              </div>
             </div>
           </motion.div>
         </Layout>
