@@ -19,12 +19,12 @@ export const ProjectCard = ({ type, img, title, summary, link = null, github }) 
         className="w-1/2 overflow-hidden rounded-lg lg:w-full "
       >
         <FramerImage
+          priority
           src={img}
           alt={title}
           className="w-full h-auto"
           whileHover={{ scale: 1.075 }}
           transition={{ duration: 0.2 }}
-          priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         />
       </div>

@@ -40,8 +40,8 @@ const contact_me = () => {
         />
       </Head>
       <TransitionEffect />
-      <main className="w-full m-8 ">
-        <Layout className="pt-8">
+      <main className="w-full m-8 md:m-4">
+        <Layout className="pt-8 md:pt-0">
           <motion.div
             ref={ref}
             className={`flex gap-40 md:flex-col md:gap-8 `}
@@ -51,7 +51,7 @@ const contact_me = () => {
           >
             <motion.div>
               <motion.h1
-                className="text-7xl font-extrabold leading-normal text-right text-black dark:text-light md:font-bold md:text-6xl md:leading-normal md:text-left"
+                className="text-7xl font-extrabold leading-normal text-right text-black dark:text-light  md:text-6xl md:leading-normal md:text-left"
                 variants={variants}
               >
                 Let’s <br />
@@ -65,7 +65,7 @@ const contact_me = () => {
                 >
                   Connect with me
                 </p>
-                <RightArrowIcon className="fill-dark opacity-60  dark:fill-light md:size-8 md:pt-2" />
+                <RightArrowIcon className="fill-dark opacity-60  dark:fill-light md:size-8 md:pt-2 md:rotate-90" />
               </div>
             </motion.div>
             <div className={`flex-1 relative flex flex-col items-center `}>
