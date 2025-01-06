@@ -84,19 +84,16 @@ const NavBar = () => {
         onClick={(e) => handleClick(e)}
       >
         <span
-          className={`bg-dark dark:bg-light block transition-all duration-400 ease-out h-0.5 w-6 rounded-sm ${
-            isOpen ? `rotate-45 translate-y-1` : `-translate-y-0.5`
-          }`}
+          className={`bg-dark dark:bg-light block transition-all duration-400 ease-out h-0.5 w-6 rounded-sm ${isOpen ? `rotate-45 translate-y-1` : `-translate-y-0.5`
+            }`}
         ></span>
         <span
-          className={`bg-dark dark:bg-light block transition-all duration-400 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
-            isOpen ? `opacity-0` : `opacity-100`
-          }`}
+          className={`bg-dark dark:bg-light block transition-all duration-400 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? `opacity-0` : `opacity-100`
+            }`}
         ></span>
         <span
-          className={`bg-dark dark:bg-light block transition-all duration-400 ease-out h-0.5 w-6 rounded-sm ${
-            isOpen ? `-rotate-45 -translate-y-1` : `translate-y-0.5`
-          }`}
+          className={`bg-dark dark:bg-light block transition-all duration-400 ease-out h-0.5 w-6 rounded-sm ${isOpen ? `-rotate-45 -translate-y-1` : `translate-y-0.5`
+            }`}
         ></span>
       </button>
       <div className="w-full flex justify-between items-center lg:hidden">
@@ -104,6 +101,7 @@ const NavBar = () => {
           <CustomLink href="/" title="Home" className="mr-4" />
           <CustomLink href="/about" title="About Me" className="mx-4" />
           <CustomLink href="/projects" title="Projects" className="mx-4" />
+          <CustomLink href="/articles" title="Articles" className="ml-4" />
           <CustomLink href="/contact_me" title="Contact Me" className="ml-4" />
         </nav>
 
@@ -150,9 +148,8 @@ const NavBar = () => {
           </motion.a>
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`ml-4 flex items-center justify-center rounded-full p-1 ${
-              mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
-            }`}
+            className={`ml-4 flex items-center justify-center rounded-full p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+              }`}
           >
             {mode === "dark" ? (
               <SunIcon className={"fill-dark"} />
@@ -233,9 +230,8 @@ const NavBar = () => {
             </motion.a>
             <button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`ml-4 flex items-center justify-center rounded-full p-1 ${
-                mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
-              }`}
+              className={`ml-4 flex items-center justify-center rounded-full p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+                }`}
             >
               {mode === "dark" ? (
                 <SunIcon className={"fill-dark lg:w-6 lg:h-6"} />
