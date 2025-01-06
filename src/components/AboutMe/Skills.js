@@ -39,7 +39,7 @@ const Skills = () => {
         whileInView={{ y: 0 }}
         transition={{ duration: 1.3, type: "spring" }}
         viewport={{ once: true }}
-        className=" text-4xl text-secondary mb-16 w-full text-center md:text-6xl sm:mb-10 sm:text-5xl"
+        className=" text-4xl text-secondary mb-16 w-full text-center md:text-sm sm:mb-10 sm:text-5xl"
       >
         ( Languages / Frameworks / Libraries / Tools )
       </motion.h2>

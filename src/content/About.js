@@ -3,14 +3,14 @@ import { v4 as uuid } from "uuid";
 export const DataContent = [
   {
     id: uuid(),
-    type: "Hello, I'm Nadeesha Madusanka, a Computer Science and Engineering Undergraduate at the University of Moratuwa. Throughout my academic journey, I've immersed myself in various facets of computer science, gaining invaluable knowledge and skills. ",
+    type: "Hello, I'm Nadeesha Madusanka, a passionate Computer Science and Engineering undergraduate from the University of Moratuwa. I specialize in applying technical expertise and innovative thinking to solve complex problems and drive impactful solutions.",
   },
   {
     id: uuid(),
-    type: "Beyond the lines of code, I'm an advocate for collaborative learning and innovation, fostering a community where ideas flourish and creativity knows no bounds.",
+    type: "With a strong foundation in computer science and a commitment to continuous learning, I thrive in collaborative environments where creativity and teamwork lead to groundbreaking results.",
   },
   {
     id: uuid(),
-    type: "I eagerly anticipate the chance to infuse my skills and passion into your next project, bringing innovation and thoughtful design to the forefront.",
+    type: "Whether it's contributing to a cutting-edge project or shaping strategic goals, I am dedicated to delivering value, fostering innovation, and making a meaningful impact in every opportunity I undertake.",
   },
 ];
