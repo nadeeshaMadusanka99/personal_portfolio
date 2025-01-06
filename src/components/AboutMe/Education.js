@@ -39,7 +39,7 @@ const Education = () => {
         whileInView={{ y: 0 }}
         transition={{ duration: 1.3, type: "spring" }}
         viewport={{ once: true }}
-        className="font-bold text-7xl mb-32 mt-30 w-full text-center md:text-6xl xs:text-4xl md:mb-16"
+        className="font-bold text-7xl mb-32 mt-30 w-full text-center md:text-6xl sm:mb-10 sm:text-5xl"
       >
         Education
       </motion.h2>

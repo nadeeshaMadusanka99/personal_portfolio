@@ -44,7 +44,7 @@ const Experience = () => {
 
   return (
     <div className="mb-28">
-      <h2 className="font-bold text-6xl  mb-20 w-full text-center">
+      <h2 className="font-bold text-6xl  mb-20 w-full text-center md:text-6xl sm:mb-10 sm:text-5xl">
         Experience
       </h2>
       <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">

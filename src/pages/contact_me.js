@@ -65,12 +65,12 @@ const contact_me = () => {
                 >
                   Connect with me
                 </p>
-                <RightArrowIcon className="fill-dark opacity-60  dark:fill-light md:size-8 md:pt-2 md:rotate-90" />
+                <RightArrowIcon className="fill-dark opacity-60 dark:fill-light md:size-8 md:pt-2 md:rotate-90" />
               </div>
             </motion.div>
-            <div className={`flex-1 relative flex flex-col items-center `}>
+            <div className={`flex-1 relative flex flex-col items-center`}>
               <AnimatedSvg isInView={isInView} />
-              <div className="w-full">
+              <div className="w-full md:flex md:flex-col md:items-center md:gap-4">
                 <FormCard />
               </div>
             </div>
