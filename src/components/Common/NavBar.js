@@ -238,7 +238,10 @@ const NavBar = () => {
               )}
             </motion.a>
             <button
-              onClick={() => setMode(mode === "light" ? "dark" : "light")}
+              onClick={(e) => {
+                e.stopPropagation();
+                setMode(mode === "light" ? "dark" : "light")
+              }}
               className={`ml-4 flex items-center justify-center rounded-full p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
                 }`}
             >
