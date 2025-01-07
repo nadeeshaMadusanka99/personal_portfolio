@@ -198,9 +198,13 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.9 }}
-              className="w-8 mx-5 sm:mx-1.5 "
+              className="w-8 mx-5 sm:mx-1.5"
             >
-              <FacebookIcon />
+              {mode === "dark" ? (
+                <FacebookIcon className={"fill-dark"} />
+              ) : (
+                <FacebookIcon className={"fill-light"} />
+              )}
             </motion.a>
             <motion.a
               href="https://github.com/nadeeshaMadusanka99"
