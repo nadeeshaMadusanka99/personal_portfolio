@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 const AnimatedSvg = ({ isInView, width = "400px", height = "485px" }) => {
   return (
     <motion.div
-      className={`stroke-3 stroke-primary ml-10 absolute dark:stroke-primaryDark p-2 -z-1  `}
+      className={`stroke-3 stroke-primary absolute dark:stroke-primaryDark p-2 -z-1  `}
       initial={{ opacity: 1 }}
       whileInView={{ opacity: 0 }}
       transition={{ delay: 3, duration: 1 }}
     >
-      <svg className={`w-[400px] h-[485px] md:w-[300px] md:h-[305px] md:mr-14 md:mt-10`} viewBox="0 0 33.5 32.666">
+      <svg className={`w-[400px] h-[485px] md:w-[300px] md:h-[305px] md:mt-10`} viewBox="0 0 33.5 32.666">
         <motion.path
           strokeWidth={0.2}
           fill="none"

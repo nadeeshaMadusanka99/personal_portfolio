@@ -1,14 +1,11 @@
 import Head from "next/head";
 
-//* Import Components
 import Layout from "@/components/Common/Layout";
 import AnimatedText from "@/components/Common/AnimatedText";
 import Skills from "@/components/AboutMe/Skills";
-// import TransitionEffect from "@/components/TransitionEffect";
 import { profilePic } from "@/imports/index";
 import { DataContent } from "@/content/About";
 import Image from "next/image";
-// import Experience from "@/components/AboutMe/Experience";
 import Education from "@/components/AboutMe/Education";
 import Link from "next/link";
 import { motion } from "framer-motion";
