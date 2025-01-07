@@ -80,7 +80,7 @@ const NavBar = () => {
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative lg:px-16 md:px-12 sm:px-8 sm:pb-4">
       <button
-        className=" flex-col justify-center items-center hidden lg:flex"
+        className=" flex-col justify-centeritems-center hidden lg:flex fixed top-0 z-10 bg-light mt-5 rounded-full px-3 py-5 dark:bg-dark dark:text-light"
         onClick={(e) => handleClick(e)}
       >
         <span
@@ -96,14 +96,16 @@ const NavBar = () => {
             }`}
         ></span>
       </button>
+
       <div className="w-full flex justify-between items-center lg:hidden">
-        <nav>
+        <nav >
           <CustomLink href="/" title="Home" className="mr-4" />
           <CustomLink href="/about" title="About Me" className="mx-4" />
           <CustomLink href="/projects" title="Projects" className="mx-4" />
-          <CustomLink href="/articles" title="Articles" className="ml-4" />
+          <CustomLink href="/articles" title="Articles" className="mx-4" />
           <CustomLink href="/contact_me" title="Contact Me" className="ml-4" />
         </nav>
+
 
         <nav className="flex justify-center items-center">
           <motion.a
@@ -111,16 +113,20 @@ const NavBar = () => {
             target={"_blank"}
             whileHover={{ y: -3 }}
             whileTap={{ scale: 0.9 }}
-            className="mr-3 w-6"
+            className="mr-3 w-7"
           >
-            <FacebookIcon />
+            {mode === "dark" ? (
+              <FacebookIcon className={"fill-light"} />
+            ) : (
+              <FacebookIcon className={"fill-dark"} />
+            )}
           </motion.a>
           <motion.a
             href="https://github.com/nadeeshaMadusanka99"
             target={"_blank"}
             whileHover={{ y: -3 }}
             whileTap={{ scale: 0.9 }}
-            className="mx-3 w-6"
+            className="mx-3 w-7"
           >
             <GithubIcon />
           </motion.a>
@@ -198,9 +204,13 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.9 }}
-              className="w-8 mx-5 sm:mx-1.5 "
+              className="w-8 mx-5 sm:mx-1.5"
             >
-              <FacebookIcon />
+              {mode === "dark" ? (
+                <FacebookIcon className={"fill-dark"} />
+              ) : (
+                <FacebookIcon className={"fill-light"} />
+              )}
             </motion.a>
             <motion.a
               href="https://github.com/nadeeshaMadusanka99"
@@ -234,7 +244,10 @@ const NavBar = () => {
               )}
             </motion.a>
             <button
-              onClick={() => setMode(mode === "light" ? "dark" : "light")}
+              onClick={(e) => {
+                e.stopPropagation();
+                setMode(mode === "light" ? "dark" : "light")
+              }}
               className={`ml-4 flex items-center justify-center rounded-full p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
                 }`}
             >

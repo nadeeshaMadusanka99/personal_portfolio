@@ -19,8 +19,6 @@ export { default as webworks } from "@/assets/images/articles/webworks.jpg";
 //* IMPORT IMAGE ABOUT
 export { default as profilePic } from "@/assets/images/profile/avatar.png";
 
-//* IMPORT IMAGE HOME
-export { default as profilePicHome } from "@/assets/images/profile/developer-pic-1.png";
 
 //* IMPORT IMAGE SKILLS
 export { default as framer } from "@/assets/images/skills/framer.png";
