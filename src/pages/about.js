@@ -52,10 +52,13 @@ const About = () => {
               </div>
             </div>
             <div
-              className=" col-span-5 relative rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light xl:col-span-6
-            md:col-span-8 sm:col-span-10 sm:p-5 "
+              className="col-span-5 relative ring-2 rounded-3xl ring-zinc-300 border-2 border-solid border-zinc-500 shadow-lg shadow-zinc-200 p-10 
+  dark:shadow-md dark:border-zinc-500 dark:bg-card dark:text-light dark:ring-zinc-300 dark:shadow-zinc-200 
+  xl:col-span-4 lg:col-span-6 lg:rounded-2xl
+  md:col-span-8 
+  sm:col-span-10 sm:p-4 sm:rounded-xl
+  xs:rounded-lg"
             >
-              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
               <motion.div
                 initial="hidden"
                 animate="visible"
@@ -68,12 +71,13 @@ const About = () => {
                 <Image
                   src={profilePic}
                   alt="NadeeshaMadusanka"
-                  className="w-[25.5rem] h-[31rem] rounded-xl md:h-[30rem] sm:h-[22rem] "
+                  className=" rounded-2xl lg:rounded-xl"
                   priority
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw "
+                  sizes="(max-width: 768px) 90vw, (max-width: 1200px) 60vw, 50vw"
                 />
               </motion.div>
             </div>
+
           </div>
           <Skills />
           <Experience />
