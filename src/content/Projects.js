@@ -79,7 +79,7 @@ export const dataProject = [
       "A user-friendly website for dog owners to find ideal dog partners for their furry friends.",
     link: "https://tindogweb44.netlify.app/",
     github: "https://github.com/nadeeshaMadusanka99/TinDog-App",
-    type: "WebsiWeb Application",
+    type: "Web Application",
     img: Tindog,
     styles: "col-span-12 ",
   },
