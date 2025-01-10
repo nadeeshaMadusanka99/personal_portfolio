@@ -40,7 +40,7 @@ const contact_me = () => {
         />
       </Head>
       <TransitionEffect />
-      <main className="w-full m-8 md:m-4">
+      <main className="w-full">
         <Layout className="pt-8 md:pt-0">
           <motion.div
             ref={ref}

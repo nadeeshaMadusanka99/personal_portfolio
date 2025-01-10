@@ -1,11 +1,16 @@
 import { v4 as uuid } from "uuid";
 import {
-  project1,
-  project2,
-  project3,
-  project4,
-  project5,
-  project6,
+  fMRI,
+  MMS,
+  Email_client,
+  Fitsmiles,
+  MovieMaster,
+  Shopify,
+  SumAI,
+  Tindog,
+  TravelGo,
+  Bookstore,
+  Carhub
 } from "@/imports";
 
 export const dataProject = [
@@ -15,7 +20,7 @@ export const dataProject = [
     summary:
       "Focused on enhancing model explainability for predicting valence from fMRI data, with the implementation of Graph Neural Networks (GNN) for improved model performance and interpretation.",
     type: "University Project",
-    img: project1,
+    img: fMRI,
     styles: "col-span-12",
   },
   {
@@ -24,7 +29,7 @@ export const dataProject = [
     summary:
       "Membership Management System for gyms. It lets admins manage operations while customers can track attendance, purchase, and pay for memberships. The system also features fingerprint-based check-ins for a smooth and secure experience.",
     type: "Company Project",
-    img: project1,
+    img: MMS,
     styles: "col-span-12",
   },
   {
@@ -33,7 +38,7 @@ export const dataProject = [
     summary:
       "Building a Store, offering both new and second-hand clothes. Users can buy new items or sell their used clothes, which are reviewed by admins before being listed for resale.",
     type: "Company Project",
-    img: project1,
+    img: Shopify,
     styles: "col-span-12",
   },
   {
@@ -43,7 +48,7 @@ export const dataProject = [
       "Innovative app, Motivating physical activity by rewarding users with coins for walking in designated areas. These coins can be redeemed for purchases within partner malls.",
     link: "https://fitsmiles.com/",
     type: "Internship Project",
-    img: project1,
+    img: Fitsmiles,
     styles: "col-span-12",
   },
   {
@@ -54,7 +59,7 @@ export const dataProject = [
     link: "http://travelgo.ecodeit.com:13000/",
     github: "https://github.com/nadeeshaMadusanka99/TravelGo-Frontend",
     type: "University Semester 5 Group Project",
-    img: project1,
+    img: TravelGo,
     styles: "col-span-12",
   },
   {
@@ -64,7 +69,7 @@ export const dataProject = [
       "CarHub Car Showcase is a sleek web app for exploring a wide range of car models. Discover detailed info, high-quality images, and key features of your favorite cars in one place.",
     github: "https://github.com/nadeeshaMadusanka99/carHub_showcase",
     type: "Web Application",
-    img: project1,
+    img: Carhub,
     styles: "col-span-12",
   },
   {
@@ -75,7 +80,7 @@ export const dataProject = [
     link: "https://tindogweb44.netlify.app/",
     github: "https://github.com/nadeeshaMadusanka99/TinDog-App",
     type: "WebsiWeb Application",
-    img: project1,
+    img: Tindog,
     styles: "col-span-12 ",
   },
   {
@@ -86,7 +91,7 @@ export const dataProject = [
     link: "https://movie-master-44.netlify.app/",
     github: "https://github.com/nadeeshaMadusanka99/movie-master-react",
     type: "Web Application",
-    img: project1,
+    img: MovieMaster,
     styles: "col-span-12 ",
   },
   {
@@ -97,17 +102,17 @@ export const dataProject = [
     link: "https://summarize-articles-ai.netlify.app/",
     github: "https://github.com/nadeeshaMadusanka99/summarize-articles-openAI",
     type: "Web Application",
-    img: project1,
+    img: SumAI,
     styles: "col-span-12",
   },
   {
     id: uuid(),
     title: "Bookstore Application",
     summary:
-      "A full-stack MERN (MongoDB, Express, React, Node.js) application for managing your virtual bookshelf. Add, update, delete, and explore book details with ease.",
+      "Backend application for managing your virtual bookshelf. Add, update, delete, and explore book details with ease.",
     github: "https://github.com/nadeeshaMadusanka99/MERN-bookstore-app",
     type: "CRUD Application",
-    img: project1,
+    img: Bookstore,
     styles: "col-span-12 ",
 
   },
@@ -118,7 +123,7 @@ export const dataProject = [
       "Java-based command-line application for managing recipients, sending emails, and automating birthday wishes. Easily add new recipients, compose emails, and track sent messages.",
     github: "https://github.com/nadeeshaMadusanka99/email-client",
     type: "CLI Application",
-    img: project1,
+    img: Email_client,
     styles: "col-span-12",
   },
 ];
