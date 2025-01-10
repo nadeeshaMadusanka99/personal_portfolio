@@ -29,3 +29,9 @@ export { default as webworks } from "@/assets/images/articles/webworks.jpg";
 //* IMPORT IMAGE ABOUT
 export { default as profilePic } from "@/assets/images/profile/avatar.png";
 
+
+//* IMPORT IMAGE SKILLS
+export { default as framer } from "@/assets/images/skills/framer.png";
+export { default as headless } from "@/assets/images/skills/headlessUI.png";
+export { default as reactNative } from "@/assets/images/skills/react-native.png";
+export { default as webix } from "@/assets/images/skills/webix.png";
