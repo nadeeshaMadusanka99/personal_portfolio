@@ -1,5 +1,15 @@
 //* IMPORT IMAGE PROJECT
-export { default as project1 } from "@/assets/images/projects/crypto-screener-cover-image.jpg";
+export { default as fMRI } from "@/assets/images/projects/fMRI.jpg";
+export { default as MMS } from "@/assets/images/projects/MMS.jpg";
+export { default as Carhub } from "@/assets/images/projects/Carhub.jpg";
+export { default as Email_client } from "@/assets/images/projects/Email-client.jpg";
+export { default as Fitsmiles } from "@/assets/images/projects/Fitsmiles.jpg";
+export { default as MovieMaster } from "@/assets/images/projects/MovieMaster.jpg";
+export { default as Shopify } from "@/assets/images/projects/Shopify.jpg";
+export { default as SumAI } from "@/assets/images/projects/SumAI.jpg";
+export { default as Tindog } from "@/assets/images/projects/Tindog.jpg";
+export { default as TravelGo } from "@/assets/images/projects/TravelGo.jpg";
+export { default as Bookstore } from "@/assets/images/projects/Bookstore.jpg";
 
 
 //* IMPORT IMAGE ARTICLES
@@ -19,9 +29,3 @@ export { default as webworks } from "@/assets/images/articles/webworks.jpg";
 //* IMPORT IMAGE ABOUT
 export { default as profilePic } from "@/assets/images/profile/avatar.png";
 
-
-//* IMPORT IMAGE SKILLS
-export { default as framer } from "@/assets/images/skills/framer.png";
-export { default as headless } from "@/assets/images/skills/headlessUI.png";
-export { default as reactNative } from "@/assets/images/skills/react-native.png";
-export { default as webix } from "@/assets/images/skills/webix.png";
