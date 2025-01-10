@@ -4,8 +4,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useScreenSize } from "../Common/useScreenSize";
 
 const SkillDataProvider = ({ src, width, height, index, name }) => {
+  const isMobile = useScreenSize();
 
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -16,8 +18,7 @@ const SkillDataProvider = ({ src, width, height, index, name }) => {
     visible: { opacity: 1 },
     hover: { scale: 1.25 },
   };
-  const animationDelay = 0.05;
-
+  const animationDelay = isMobile ? 0.04 : 0.08;
   return (
     <motion.div
       ref={ref}
