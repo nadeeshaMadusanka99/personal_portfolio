@@ -39,7 +39,7 @@ const SkillDataProvider = ({ src, width, height, index, name }) => {
         className="mb-2"
       />
       <span
-        className="absolute bottom-0 translate-y-full bg-gray-800 text-white text-sm text-center py-1 px-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 dark:bg-white dark:text-black"
+        className="absolute z-10 bottom-[-6px] translate-y-full bg-gray-800 text-white text-sm text-center py-1 px-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 dark:bg-white dark:text-black"
       >
         {name}
       </span>
