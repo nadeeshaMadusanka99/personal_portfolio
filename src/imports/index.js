@@ -35,3 +35,4 @@ export { default as framer } from "@/assets/images/skills/framer.png";
 export { default as headless } from "@/assets/images/skills/headlessUI.png";
 export { default as reactNative } from "@/assets/images/skills/react-native.png";
 export { default as webix } from "@/assets/images/skills/webix.png";
+export { default as highcharts } from "@/assets/images/skills/highcharts.png";

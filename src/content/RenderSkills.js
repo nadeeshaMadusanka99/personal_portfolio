@@ -1,4 +1,4 @@
-import { framer, headless, reactNative, webix } from "@/imports";
+import { framer, headless, reactNative, webix, highcharts } from "@/imports";
 
 export const row1 = [
   {
@@ -16,6 +16,15 @@ export const row1 = [
   {
     name: "Typescript",
     image: "https://skillicons.dev/icons?i=ts",
+  },
+  {
+    name: "Python",
+    image: "https://skillicons.dev/icons?i=py",
+  },
+
+  {
+    name: "Java",
+    image: "https://skillicons.dev/icons?i=java",
   },
   {
     name: "React Js",
@@ -59,15 +68,7 @@ export const row2 = [
     name: "Django",
     image: "https://skillicons.dev/icons?i=django",
   },
-  {
-    name: "Python",
-    image: "https://skillicons.dev/icons?i=py",
-  },
 
-  {
-    name: "Java",
-    image: "https://skillicons.dev/icons?i=java",
-  },
   {
     name: "MySQL",
     image: "https://skillicons.dev/icons?i=mysql",
@@ -118,8 +119,8 @@ export const row4 = [
     image: framer.src,
   },
   {
-    name: "Headless UI",
-    image: headless.src,
+    name: "Highcharts",
+    image: highcharts.src,
   },
   {
     name: "Jest",
