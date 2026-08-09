@@ -16,7 +16,7 @@ import {
 export const dataProject = [
   {
     id: uuid(),
-    title: "Final Year Project (Ongoing)",
+    title: "Final Year Project",
     summary:
       "Focused on enhancing model explainability for predicting valence from fMRI data, with the implementation of Graph Neural Networks (GNN) for improved model performance and interpretation.",
     type: "University Project",

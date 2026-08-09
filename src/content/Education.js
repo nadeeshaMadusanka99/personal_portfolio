@@ -3,7 +3,7 @@ export const dataEducation = [
   {
     id: uuid(),
     type: "  BSc(Hons) in Computer Science & Engineering ",
-    time: " 2020 - Present",
+    time: " 2020 - 2025",
     place: "University Of Moratuwa",
     info: "Acquired a robust knowledge base in diverse domains. Engaging in hands-on experiences has further enriched my understanding and equipped me with practical skills across various engineering disciplines.",
   },
